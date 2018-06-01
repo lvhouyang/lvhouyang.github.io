@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E80000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+.fgx {
+    height: 2px;
+    background-color: gray;
+}
+
+
+.header {
+    width: 100%;
+    height: 110px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f1f1;
+}
+.header-logo{
+    line-height: 110px;
+    float: left;
+    padding-left: 350px;
+}
+.header-desc {
+    float: right;
+    padding-right: 350px;
+}
+.RegisterBody {
+    border: 1px dashed #f1f1f1;
+    height: 700px;
+    border-top: 0;
+}
+.LoginBody {
+    border: 1px dashed #f1f1f1;
+    height: 600px;
+    border-top: 0;
+}
+input {
+    width: 350px;
+    height: 32px;
+    margin: 20px 0;
+    font: 400 15px/32px "微软雅黑";
+    color: rgb(153, 153, 153);
+    border: 2px solid #f1f1f1;
+    padding-left: 0px;
+}
+form {
+    margin: 0 0 0 20px;
+    width: 600px;
+    height: 600px;
+    padding-top: 100px;
+}
+
+span {
+    /*margin-left: 30px;*/
+    font-size: 12px;
+    padding:2px 20px 0;
+    color: #ccc;
+}
+
+.wrong {
+    color: red;
+    background: url(../images/error.png) no-repeat;
+
+}
+
+.right {
+    color: green;
+    background: url(../images/right1.png) no-repeat;
+}
+
+.pwd {
+    width: 220px;
+    height: 20px;
+    background: url("../images/strong.jpg") no-repeat;
+    margin-left: 150px;
+}
+.str1{
+    background-position: 0 -20px;
+}
+.str2{
+    background-position: 0 -40px;
+}
+.str3{
+    background-position: 0 -60px;
+}
+.str4{
+    background-position: 0 -80px;
+}
+button {
+    width: 350px;
+    height: 50px;
+    margin: 0px 50px;
+    background-color: #f1f1f1;
+    color: #E80000;
+    cursor: pointer;
+    font: 400 20px/50px "微软雅黑";
+}
+.outer{
+    margin-top: 20px;
+    position: relative;
+    margin-left: 65px;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    border:1px solid #ccc;
+    background: #ccc9c9;
+
+}
+.outer span,.filter-box,.inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.outer span{
+    display: block;
+    padding:0  0 0 36px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+.filter-box{
+    width: 0;
+    height: 100%;
+    background: green;
+    z-index: 9;
+}
+.outer.act span{
+    padding:0 36px 0 0;
+}
+.inner{
+    width: 36px;
+    height: 40px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    z-index: 10;
+    font-weight: bold;
+    color: #929292;
+}
+.outer.act .inner{
+    color: green;
+}
+.outer.act span{
+    z-index: 99;
+}
+
+
+.footer-top-slogen {
+    width: 100%;
+    height: 54px;
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 16px;
+    background-color: #F5F5F5;
+}
+.footer-top-slogen-icon {
+    position: absolute;
+    /*top: 20px;*/
+    left: 50%;
+}
+.footer-top-slogen-icon1 {
+    margin-left: -604px;
+}
+.footer-top-slogen-icon2 {
+    margin-left: -302px;
+}
+.footer-top-slogen-icon4 {
+    margin-left: 302px;
+}
+.footer-top-shopping dl {
+    float: left;
+    width: 200px;
+}
+dl.last-dl {
+    width: 100px;
+}
+.footer-top-shopping dt,
+.coverage h3 {
+    height: 34px;
+    font: 400 16px/34px "microsoft yahei";
+}
+.footer-top-shopping dd {
+    line-height: 20px;
+}
+.coverage {
+    width: 186px;
+    height: 169px;
+    float: right;
+    margin-right: 60px;
+    padding-left: 17px;
+    background: url(../images/china.png) no-repeat left bottom;
+}
+.coverage p {
+    padding-top: 8px;
+}
+.coverage a {
+    float: right;
+}
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px 0 30px;
+    border-top: 1px solid #E5E5E5;
+}
+.footer-bottom-links a {
+    margin: 0 10px;
+}
+.footer-bottom-copyright {
+    padding: 10px 0;
+}
+.footer-bottom-img a {
+    margin: 0 5px;
+}
+.game-show li{
+    list-style: none;
+}
+
+
+/*footer部分end*/
+
+
