@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*css 初始化 */
 html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
     margin: 0;
@@ -204,6 +204,7 @@ span {
     background-position: 0 -80px;
 }
 button {
+    border-radius: 10px;
     width: 350px;
     height: 50px;
     margin: 0px 50px;
