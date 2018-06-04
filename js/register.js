@@ -102,7 +102,7 @@ window.onload = function () {
             this.style.border = "2px solid red"
         }
     })
-    //��¼��֤��
+    //滑动验证
 }
 $(function(){
     $(".inner").mousedown(function(e){
@@ -134,6 +134,10 @@ $(function(){
             el.css("left",dx);
 
         })
+    })
+    //直接登录
+    $("#Tologin").click(function () {
+        window.location.href = "index.html?count=1";
     })
 
 })

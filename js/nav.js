@@ -59,7 +59,7 @@ $(function () {
             })
         })
     })
-     //打开登录框
+     //关闭登录框
     $(".close-login").click(function () {
         $(".login").stop().animate({opacity:"0"},1000).queue(function () {
             $(".login").hide();
@@ -67,13 +67,22 @@ $(function () {
             $(".mask").hide()
         })
     })
-    //关闭登录框
+
+    //弹出登录框
     $("#login-enter").click(function () {
         $(".login").stop().animate({top:"230"},1000).queue(function(){
             $(".mask").stop().animate({opacity:"0.7"},1000)
             $(".mask").show()
         })
     })
+    //从注册页面跳转过来 自动弹出登录框
+    if(document.referrer.indexOf("register")!= -1){   //得到网页来源(register页面)不等于-1 说明有register字段
+        $("#login-enter").trigger("click");
+        document.referrer = "";
+        console.log(2)
+    }else{
+        console.log(1)
+    }
     //展开更多分类导航
     $(".shortcut-nav-menu-one").hover(function () {
         $(".shortcut-nav-menu-one-content").show()
