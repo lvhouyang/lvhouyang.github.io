@@ -208,8 +208,8 @@ button {
     width: 350px;
     height: 50px;
     margin: 0px 50px;
-    background-color: #f1f1f1;
-    color: #E80000;
+    background-color: #80000;
+    color: white;
     cursor: pointer;
     font: 400 20px/50px "微软雅黑";
 }

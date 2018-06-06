@@ -1,13 +1,13 @@
-window.onload = function () {
+﻿window.onload = function () {
     //注册按钮事件
     var btn = document.getElementById("Register-btn");
     btn.onmouseover = function () {
-        this.style.backgroundColor = "#E80000"
+        this.style.backgroundColor = "red
         this.style.color = "white"
     }
     btn.onmouseout = function () {
-        this.style.backgroundColor = "#f1f1f1"
-        this.style.color = "#E80000"
+        this.style.backgroundColor = ""
+        this.style.color = "white"
     }
 
     ///
