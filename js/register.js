@@ -2,7 +2,7 @@
     //注册按钮事件
     var btn = document.getElementById("Register-btn");
     btn.onmouseover = function () {
-        this.style.backgroundColor = "red
+        this.style.backgroundColor = "red"
         this.style.color = "white"
     }
     btn.onmouseout = function () {
