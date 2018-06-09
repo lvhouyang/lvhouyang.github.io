@@ -5,7 +5,7 @@ $(function(){
     function gamerun(){
         timer = setInterval(function () {
             $(".gPic li:not(this)").hide();
-            $(".gPic li").eq(i).fadeIn(300);
+            $(".gPic li").eq(i).show();
             $(".gName span:not(this)").stop().animate({
                 width:"1",
             },200)
