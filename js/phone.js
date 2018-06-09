@@ -10,7 +10,7 @@ $(function(){
                 i=-1;
             }
 
-        },1300)
+        },2000)
     }
     phonerun();
     var liArr = $(".phone-show li");

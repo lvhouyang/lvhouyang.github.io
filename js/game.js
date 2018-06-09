@@ -17,7 +17,7 @@ $(function(){
             if(i==4){
                 i=-1;
             }
-        },1000)
+        },2500)
     }
     gamerun()
     //$(".gPic li:gt(0)").hide()
