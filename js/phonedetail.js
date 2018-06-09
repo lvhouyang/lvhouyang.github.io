@@ -1,4 +1,4 @@
-var i=0;
+﻿var i=0;
 $(function () {
         //$(".detail-list li").eq(0).css("border","1px solid red")
         $(".detail-list li").hover(function () {
@@ -66,7 +66,7 @@ window.onload = function(){
 
 
       var bigImg = document.getElementsByClassName("pic-big")[0].children[0];
-      console.log(bigImg)
+     
       var bl = (bigImg.offsetWidth-big.offsetWidth)/(small.offsetWidth-mask.offsetWidth);
       var xx = x*bl;
       var yy = y*bl;

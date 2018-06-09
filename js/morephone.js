@@ -16,7 +16,10 @@ $(function () {
             bottom:"-75"
         },300)
     })
-    $(".phone-show a").attr("href","Phone-detail.html")
+    $(".phone-show a").attr("href","Phone-detail.html");
+    $(".phone-show button").click(function () {
+        location.href  = "Phone-detail.html"
+    })
     //选择手机类型
     $(".phone-banner-list a").eq(2).css({backgroundColor:"#E80000",
         color:"white"})
