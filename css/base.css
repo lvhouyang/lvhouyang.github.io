@@ -702,6 +702,7 @@ s, i, em {
         height: 350px;
         background-color: coral;
         position: relative;
+        overflow: hidden;
     }
     .gName{
         background-color: #f4f4f4;
