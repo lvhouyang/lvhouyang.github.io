@@ -3,7 +3,7 @@ var timer=null;
 $(function(){
     function picRun(){
         timer  = setInterval(function () {
-            $(".pic li").eq(i).fadeIn(2000).siblings( $(".pic li")).hide();
+            $(".pic li").eq(i).fadeIn('slow').siblings( $(".pic li")).hide();
             $(".pic span").eq(i).addClass("current").siblings( $(".pic span")).removeClass("current")
             i++;
             if(i==5){
@@ -30,7 +30,7 @@ $(function(){
             i=5
         }
         i--;
-        $(".pic li").eq(i).fadeIn(200).siblings( $(".pic li")).hide();
+        $(".pic li").eq(i).fadeIn('slow').siblings( $(".pic li")).hide();
         $(".pic span").eq(i).addClass("current").siblings( $(".pic span")).removeClass("current")
     })
     $(".pic-next").click( function () {
@@ -38,13 +38,13 @@ $(function(){
             i=-1
         }
         i++;
-        $(".pic li").eq(i).fadeIn(200).siblings( $(".pic li")).hide();
+        $(".pic li").eq(i).fadeIn('slow').siblings( $(".pic li")).hide();
         $(".pic span").eq(i).addClass("current").siblings( $(".pic span")).removeClass("current")
     })
     $(".pic span").hover(function () {
         $(this).addClass("current").siblings( $(".pic span")).removeClass("current")
         var j = $(this).index();
-        $(".pic li").eq(j).fadeIn(200).siblings( $(".pic li")).hide();
+        $(".pic li").eq(j).fadeIn('slow').siblings( $(".pic li")).hide();
 
     })
 })

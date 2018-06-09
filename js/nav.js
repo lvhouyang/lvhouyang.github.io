@@ -15,7 +15,21 @@ $(function () {
     })
     //右侧导航栏
     $(".right-banner-detail span").hover(function () {
-        $(this).stop().animate({width:"100"},500)
+        var i = $(this).index()
+        $(".right-banner-detail span em").eq(i).css({
+            backgroundColor:'#e80000',
+            zIndex:"-1"
+        })
+        $(".right-banner-detail span em").eq(i).show()
+        $(".right-banner-detail span em").eq(i).stop().animate({right:"38",},400)
+    }, function () {
+        var i = $(this).index();
+        $(".right-banner-detail span em").eq(i).css({
+            backgroundColor:'#ebdfeb',
+            zIndex:"-1"
+        })
+        $(".right-banner-detail span em").eq(i).stop().animate({right:"-55"},400)
+
     })
 
 

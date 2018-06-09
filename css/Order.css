@@ -346,7 +346,7 @@ s, i, em {
     left: 0;
     top: 0;
     /*background-color: #f1f1f1;*/
-    border: 1px solid #E80000;
+    border-left: 1px solid #E80000;
     z-index: 3;
 }
 .shortcut-nav-menu-one a {
@@ -365,15 +365,47 @@ s, i, em {
 .shortcut-nav-menu-one-content{
     width: 1030px;
     height: 700px;
-    background-color: #f1f1f1;
+    /*background-color: #f1f1f1;*/
     margin-left: 180px;
 }
 .information{
+    color: black;
+    font-size: 15px;
+    font-family: 宋体;
+    font-weight: 600;
     width: 700px;
     height: 700px;
     /*background-color: red;*/
     margin:0 auto ;
-
+}
+.information .info {
+    width: 450px;
+    float: right;
+    margin-top: 100px;
+}
+.information .info input {
+    border-bottom: 1px solid black;
+    width: 300px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.information .head-pic {
+    width: 180px;
+    height: 230px;
+    float: left;
+    margin-top: 110px;
+}
+button {
+    border-radius: 10px;
+    width: 350px;
+    height: 50px;
+    margin: 20px 50px;
+    background-color: #E80000;
+    color: white;
+    cursor: pointer;
+    font: 500 20px/50px "微软雅黑";
 }
 
 .shortcut-nav-items {

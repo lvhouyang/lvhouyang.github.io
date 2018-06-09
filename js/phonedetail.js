@@ -20,7 +20,11 @@ $(function () {
    $(".chose-type span").click(function () {
       $(this).css("border","1px solid red")
    })
-
+    $(".phone-show-detail-choose a").eq(0).css("backgroundColor","#e80000");
+    $(".phone-show-detail-choose a").on('click', function () {
+        $(".phone-show-detail-choose a").css("backgroundColor","");
+        $(this).css("backgroundColor","#e80000");
+    })
 })
 //放大镜
 window.onload = function(){
@@ -92,6 +96,7 @@ window.onload = function(){
          top: document.body.scrollTop
       }
    }
+
 }
 
 

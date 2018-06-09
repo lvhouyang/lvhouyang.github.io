@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="plugin/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#submit").click(function () {
+                if( $("#content").val()==""){
+                    alert("请输入评论内容");
+                }else{
+                    var content = $("#content").val();
+                    var timenow = new Date()
+                    var h = timenow.getHours()
+                    console.log(h)
+                    console.log(timenow)
+                    var a = JSON.stringify(timenow)
+                    console.log(a)
+                    var d = a.substr(11,3)
+                    console.log(d)
+                    var a= a.replace(d,h)
+                    var b = a.substr(1,10)
+                    console.log(b)
+                    var c = a.substr(11,8)
+                    console.log(c)
+
+                    var now = b+" "+c
+                    console.log(now)
+                    var str = "<li>"+
+                            "<div class='header'><img src='images/header.png'><div class='userdate'><span style='font-size: 16px;color: black'>Wake</span><br><span>"+now+"</span></div></div>"+
+                            "<p class= 'detail'>"+content+"</p>"+
+                            "</li>";
+                    $(".comment-detail ul").append(str)
+                    $("#count1").html($(".comment-detail li").length)
+                    $("#content").val("")
+                }
+
+            })
+
+        })
+
+    </script>
+</head>
+
+<body>
+<div class="comment w">
+    <span style="padding-left: 30px;font-size: 18px;font-weight: 400;color: black;padding-top: 30px">我的点评：</span><br/>
+
+    <textarea id="content" maxlength="50" ></textarea><br/>
+    <button id="submit">提交</button>
+    <div class="fgx" style="margin-top: 60px"></div>
+    <div class="comment-detail w"  >
+        <ul>
+            <li>
+                <div class="header" ><img src="images/header.png" alt=""/><div class="userdate"><span style="font-size: 16px;color: black">Wake</span><br><span >2018-06-06 10:27:01</span></div></div>
+                <p class="detail">很好用啦 五星好评！！！！</p>
+            </li>
+            <li>
+                <div class="header" ><img src="images/header.png" alt=""/><div class="userdate"><span style="font-size: 16px;color: black">Wake</span><br><span >2018-06-06 10:27:01</span></div></div>
+                <p class="detail">很好用啦 五星好评！！！！</p>
+            </li>
+            <li>
+                <div class="header" ><img src="images/header.png" alt=""/><div class="userdate"><span style="font-size: 16px;color: black">Wake</span><br><span >2018-06-06 10:27:01</span></div></div>
+                <p class="detail">很好用啦 五星好评！！！！</p>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
