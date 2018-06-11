@@ -28,6 +28,9 @@ $(function(){
         phonerun()
         //$(".phone-show li").stop().animate({width:"240"},300);
     })
+    $(".phone-show li").click(function () {
+        window.location.href = "More-Phone.html"
+    })
 
 
 })

@@ -1,6 +1,9 @@
 var i=0;
 var timer=null;
 $(function(){
+    $(".pic li").click(function(){
+        window.location.href = "More-Movie.html"
+    })
     function picRun(){
         timer  = setInterval(function () {
             $(".pic li").eq(i).fadeIn('slow').siblings( $(".pic li")).hide();
