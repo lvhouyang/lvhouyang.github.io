@@ -44,6 +44,7 @@ $(function () {
                 }
 
                 var Img = json.subjects[i].images.small;
+                 Img = Img.replace('https://','https://images.weserv.nl/?url=')
                 var str = "<ul class='movie'><li class='logo' style='float: left'><img class='Img' src='" + Img + "'> <li class='detail' style='margin-left: 20px'>" +
                     "<p>　　<a href='#' target='' class='FilmName'>" + Fname + "</a></p>" +
                     " <p><span>　导演：</span><a href='#' target=''class='Artist'>" + Art + "</a></p>" +
