@@ -748,6 +748,16 @@ s, i, em {
         float: left;
         padding: 0 10px 80px 0;
     }
+    .concert-show li:nth-child(1), .concert-show li:nth-child(2), .concert-show li:nth-child(5), .concert-show li:nth-child(6){
+        transform: translateX(-500px);
+        opacity: .5;
+        transition: all 1s;
+    }
+    .concert-show li:nth-child(3), .concert-show li:nth-child(4), .concert-show li:nth-child(7), .concert-show li:nth-child(8){
+        transform: translateX(500px);
+        opacity: .5;
+        transition: all 1s;
+    }
     .concert-show-pic a{
         width: 288px;
         height: 384px;
@@ -876,8 +886,17 @@ s, i, em {
         list-style: none;
     }
 
-
     /*footer部分end*/
+
+
+    .content-concert .concert-show li.fadeLeft {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .content-concert .concert-show li.fadeRight {
+        transform: translateX(0);
+        opacity: 1;
+    }
 
 
 

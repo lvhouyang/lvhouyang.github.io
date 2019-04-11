@@ -13,6 +13,22 @@
     <script src="js/pic.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
+    <!-- <script>
+            wi
+
+                var eleTop = $('.concert-show').offset().top;
+                console.log(eleTop)
+                var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                 var isFirst = true;
+                if(scrollTop > eleTop){
+                isFirst = false;
+                $('.concert-show ul li').eq(0).addClass('fadeLeft')
+            }
+            
+        
+        
+        
+    </script> -->
 </head>
 <body>
 <div class="mask"></div>
@@ -373,8 +389,8 @@
                 <li><a href="More-Concert.html">更多分类>></a></li>
             </ul>
         </div>
-        <div class="concert-show" style="position: relative">
-            <ul class="concert-show-pic">
+        <div class="concert-show" style="position: relative;overflow: hidden;">
+            <ul class="concert-show-pic clearfix" >
                 <li><a href="More-Concert.html"><img src="images/concert01.jpg" alt=""/></a></li>
                 <li><a href="More-Concert.html"><img src="images/concert02.jpg" alt=""/></a></li>
                 <li><a href="More-Concert.html"><img src="images/concert03.jpg" alt=""/></a></li>
