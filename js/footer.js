@@ -21,8 +21,7 @@ $(function () {
             $('.concert-show ul li').eq(3).addClass('fadeRight')
             $('.concert-show ul li').eq(6).addClass('fadeRight')
             $('.concert-show ul li').eq(7).addClass('fadeRight')
-            isFirst = false;
-          
+            isFirst = false;     
         }
     }
 

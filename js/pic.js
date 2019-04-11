@@ -47,7 +47,7 @@ $(function(){
     $(".pic span").hover(function () {
         $(this).addClass("current").siblings( $(".pic span")).removeClass("current")
         var j = $(this).index();
-        $(".pic li").eq(j).fadeIn('slow').siblings( $(".pic li")).hide();
+        $(".pic li").eq(j).show().siblings( $(".pic li")).hide();
 
     })
 })
