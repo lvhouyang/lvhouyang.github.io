@@ -1,5 +1,8 @@
 //返回顶部
-$(function () {
+
+$(document).ready(function(){
+    alert('1')
+})
     window.onscroll = function(){
         var eleTop = $('.concert-show').offset().top;
         var isFirst = true;
@@ -32,4 +35,4 @@ $(function () {
         })
     }
   
-})
+
