@@ -1,4 +1,5 @@
 $(function () {
+    $('.cover-all div').addClass('welcome')
     //语言选择
     $(".site-nav-send").hover(function () {
         $(this).css("backgroundColor","#ffffff")

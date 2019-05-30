@@ -16,14 +16,13 @@ function imgFade() {
     var cliHeight = $(window).height();
     var scroll = $(document.documentElement).scrollTop() + cliHeight;
     if (scroll > eleTop && isFirst == true) {
-        $('.concert-show ul li').eq(1).addClass('fadeLeft')
-        $('.concert-show ul li').eq(0).addClass('fadeLeft')
-        $('.concert-show ul li').eq(4).addClass('fadeLeft')
-        $('.concert-show ul li').eq(5).addClass('fadeLeft')
-        $('.concert-show ul li').eq(2).addClass('fadeRight')
-        $('.concert-show ul li').eq(3).addClass('fadeRight')
-        $('.concert-show ul li').eq(6).addClass('fadeRight')
-        $('.concert-show ul li').eq(7).addClass('fadeRight')
+        for(var i=0;i<$('.concert-show ul li').length;i++){
+            if(i%2==0){
+                $('.concert-show ul li').eq(i).addClass('fadeLeft')
+            }else {
+                $('.concert-show ul li').eq(i).addClass('fadeRight')
+            }
+        }
         isFirst = false;
     }
 }

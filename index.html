@@ -8,14 +8,66 @@
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="shortcut icon" href="images/MinMxlogo.png"/>
     <script src="plugin/jquery-3.3.1.min.js"></script>
-    <script src="js/common.js"></script>
+    <!-- <script src="js/common.js"></script> -->
     <script src="js/phone.js"></script>
     <script src="js/game.js"></script>
     <script src="js/pic.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
+    <style>
+        .cover-all {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #fff;
+            opacity: 1;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+        .toMb,.toPc {
+            width: 500px;
+            height: 250px;
+            background-color: pink;
+            line-height: 250px;
+            color: #fff;
+            border-radius: 50px;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: 600px;
+            font-size: 50px;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        .toMb {
+            transform: translateX(-1000px);
+            background-color: #00bcd4;
+        }
+        .toPc {
+            transform: translateX(1000px);
+            background-color: #9F79EE;
+        }
+        .toMb:hover {
+            transform: rotate(180deg)
+        }
+        .toPc:hover {
+            transform: rotate(-180deg)
+        }
+        .welcome {
+            transform: translate(0);
+        }
+    </style>
 </head>
 <body>
+<div class="cover-all">
+    <div class="toMb">移动Web去哪儿</div>
+    <div class="toPc">PC端觅寻网</div>
+
+</div>
 <div class="mask"></div>
 <!--site-nav部分start-->
 <div class="site-nav">
