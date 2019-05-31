@@ -1,1 +1,518 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>travel</title><link href=./static/css/app.959ceb5237d32afd6ecd50787d493404.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.1f880ce700b61786c276.js></script><script type=text/javascript src=./static/js/app.80be9f6ac9f3c288ac23.js></script></body></html>
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer"/>
+    <title>觅寻,这啥都有 by吕厚阳</title>
+    <meta name="description" content="吕厚阳的个人小网站，百度能搜到我吗？？">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="shortcut icon" href="images/MinMxlogo.png"/>
+    <script src="plugin/jquery-3.3.1.min.js"></script>
+    <!-- <script src="js/common.js"></script> -->
+    <script src="js/phone.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/pic.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+   
+</head>
+<body>
+
+<div class="mask"></div>
+<!--site-nav部分start-->
+<div class="site-nav">
+    <div class="w">
+        <div class="fl">
+            <div class="site-nav-send" style="position: absolute">
+                语言：中文
+                <i><s>◇</s></i>
+                <div class="language">
+                    <a href="#">English</a>
+                    <a href="#">马来西亚语</a>
+                    <a href="#">日本语</a>
+                </div>
+            </div>
+            .<div class="site-nav-city"></div>
+        </div>
+        <div class="fr site-nav-r">
+            <ul>
+                <li>
+                    <a href="#" id="login-enter">你好，请登录</a>&nbsp;
+                    <a href="register.html" class="col-red">免费注册</a>
+                </li>
+                <li class="line"></li>
+                <li><a href="Order.html">我的订单</a></li>
+                <li class="line"></li>
+                <li class="fore">
+                    <a href="Order.html">我的觅寻</a>
+                    <i><s>◇</s></i>
+                </li>
+                <li class="line"></li>
+                <li><a href="#">觅寻会员</a></li>
+                <li class="line"></li>
+                <!--<li><a href="#">企业采购</a></li>-->
+                <!--<li class="line"></li>-->
+                <li class="fore jd-tel" style="position: relative">
+                    <a href="#">手机觅寻</a>
+                    <span></span>
+                    <i><s>◇</s></i>
+                    <div class="erweima">
+                        <img class="aax" src="images/erweima.png" alt=""/>
+                    </div>
+                </li>
+                <li class="line"></li>
+                <li class="fore">
+                    关注觅寻
+                    <i><s>◇</s></i>
+                </li>
+                <li class="line"></li>
+                <li class="fore">
+                    客户服务
+                    <i><s>◇</s></i>
+                </li>
+                <li class="line"></li>
+                <li class="fore">
+                    网站导航
+                    <i><s>◇</s></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--登录框-->
+<div class="login w">
+    <div class="login-logo" style="background-color: #ffffff;border-bottom: 1px solid #f1f1f1"><a  href="#"><img style="padding-left: 120px" src="images/Mxlogo.png" alt=""/></a></div>
+    <form action="">
+        <label for="name">用户名 ：<input type="text" id="name"/></label><br/>
+        <label for="password">密　码 ：<input type="password" id="password"/></label><br/>
+        <div class="outer">
+            <div class="filter-box"></div>
+        <span>
+            向右滑动以验证登录
+        </span>
+            <div class="inner">&gt;&gt;</div>
+        </div>
+
+        <button id="MXlogin">登录</button>
+        <div class="close-login"></div>
+    </form>
+
+
+</div>
+<!--site-nav部分end-->
+
+<!--top-banner部分start-->
+<div class="top-banner">
+    <div class="w tb">
+        <a href="#">
+            <img src="images/topbanner.jpg"/>
+        </a>
+        <a class="close-banner"></a>
+    </div>
+</div>
+<!--top-banner部分end-->
+
+<!--search部分start-->
+<div class="w clearfix">
+    <div class="search-logo">
+        <a href="index.html" title="觅寻" target="_blank">觅寻官网</a>
+    </div>
+    <div class="search-input">
+        <!--placeholder="运动相机"-->
+        <input type="text" placeholder="Vivo X21"/>
+        <button>搜索</button>
+    </div>
+    <div class="search-car">
+        <a href="Order.html">我的购物车</a>
+        <i class="icon1"></i>
+        <i class="icon2">&gt;</i>
+        <i class="icon3">8</i>
+    </div>
+    <div class="search-moreAlink">
+        <a href="#" class="col-red">复仇者联盟3</a>
+        <a href="#">极限挑战</a>
+        <a href="#">奔跑吧</a>
+        <a href="#">OPPO R15</a>
+        <a href="#">IPONE X</a>
+        <a href="#">平凡的世界</a>
+        <a href="#">英雄联盟</a>
+        <a href="#">周杰伦演唱会</a>
+    </div>
+</div>
+<!--search部分end-->
+
+<!--banner-right部分start-->
+<div class="right-banner">
+    <div class="right-banner-detail">
+        <span><em>个人中心</em>∑</span>
+        <span><em>购物车</em>∏</span>
+        <span><em>我的收藏</em>∪</span>
+        <span><em>联系客服</em>∥</span>
+        <span><em>啦啦啦</em>♀</span>
+    </div>
+
+</div>
+<!--banner-right部分end-->
+
+<!--shortcut-nav部分start-->
+<div class="shortcut-nav">
+    <div class="w">
+        <div class="shortcut-nav-menu">
+            <div class="shortcut-nav-menu-all">
+                <a href="#">觅寻分类</a>
+            </div>
+
+        </div>
+        <div class="shortcut-nav-items">
+            <ul>
+                <li><a href="More-Movie.html" >最热电影</a></li>
+                <li><a href="More-Phone.html" id="more-phone">热销电商</a></li>
+                <li><a href="More-Book.html" id="more-book">畅销书籍</a></li>
+                <li><a href="More-Concert.html" id="more-concert">爱豆演唱会</a></li>
+                <li><a href="More-Game.html" id="more-game">娱乐游戏</a></li>
+                <li><a href="https://www.pinduoduo.com/">拼多多</a></li>
+            </ul>
+        </div>
+        <div class="shortcut-nav-img">
+            <a href="#">
+                <img src="images/img2.jpg"/>
+            </a>
+        </div>
+    </div>
+</div>
+<!--shortcut-nav部分end-->
+
+<!--content部分start-->
+<div class="content">
+
+    <div class="w" style="position: relative">
+        <!--分类-->
+        <div class="shortcut-nav-menu-one" style="color: #fff">
+            <ul style="padding-top: 20px">
+                <li><a href="#">电视　电影　动漫<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+                <li><a href="#">手机　电脑　Ipad<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a>
+                </li>
+                <li><a href="#">家电　居家<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+                <li><a href="#">爱豆　专辑　演唱会<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a>
+                </li>
+                <li><a href="#">出行　旅游　滴滴<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+                <li><a href="#">外套　内衣　鞋子<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+                <li><a href="#">电视　电影　动漫<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+                <li><a href="#">手机　电脑　Ipad<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+                <li><a href="#">电视　电影　动漫<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a>
+                </li>
+                <li><a href="#">电视　电影　动漫<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a>
+                </li>
+                <li><a href="#">爱豆　专辑　演唱会<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+                <li><a href="#">家电　居家<i style="position: absolute;right: 10px"><img style="height: 10px" src="images/more.png" alt=""/></i></a></li>
+            </ul>
+
+        </div>
+
+        <div class="shortcut-nav-menu-one-content w">
+
+            <ul style="padding-top: 20px">
+                <li><a href="#">电视　电影　动漫　电视　电影　动漫</a></li>
+                <li><a href="#">手机　电脑　Ipad　电视影　动漫</a>
+                </li>
+                <li><a href="#">家电　居家　电视　电影　动漫</a></li>
+                <li><a href="#">爱豆　专辑　演唱会　电视　电影　动漫</a>
+                </li>
+                <li><a href="#">出行　旅游　滴滴　电视　电影　动漫</a></li>
+                <li><a href="#">外套　内衣　鞋子　电视　电</a></li>
+                <li><a href="#">电视　电影　动漫视　电影　动漫</a></li>
+                <li><a href="#">手机　电脑　Ipad　电视　电影　动漫</a></li>
+                <li><a href="#">电视　电影　动漫　电</a>
+                </li>
+                <li><a href="#">电视　电影　动漫　电视　电影　动漫</a>
+                </li>
+                <li><a href="#">爱豆　专辑　演电视　电影　动漫</a></li>
+                <li><a href="#">家电　居家　电视　电影　动漫</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--轮播图-->
+    <div class="pic">
+        <ul>
+            <li style="width:100%;height:411px;text-align:center;background-color:#fbf1e8 "><a href="More-Movie.html"><img width="1681px" height="411px" src="images/pic01.png" alt=""/></a></li>
+            <li style="width:100%;height:411px;text-align:center;background-color:#456c97 "><a href="More-Movie.html"><img width="1681px" height="411px" src="images/pic02.png" alt=""/></a></li>
+            <li style="width:100%;height:411px;text-align:center;background-color:#bbb9ba "><a href="More-Movie.html"><img width="1681px" height="411px" src="images/pic03.png" alt=""/></a></li>
+            <li style="width:100%;height:411px;text-align:center;background-color:#4a4b55 "><a href="More-Movie.html"><img width="1681px" height="411px" src="images/pic04.png" alt=""/></a></li>
+            <li style="width:100%;height:411px;text-align:center;background-color:#efcebb "><a href="More-Movie.html"><img width="1681px" height="411px" src="images/pic05.png" alt=""/></a></li>
+
+        </ul>
+        <div class="square">
+            <span class="current"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="pic-prev">
+            <img src="images/prev.png" alt=""/>
+        </div>
+        <div class="pic-next">
+            <img src="images/next.png" alt=""/>
+        </div>
+    </div>
+    <!--电影电视-->
+    <div class="content-movie w">
+        <div class="movie-title">
+            <a href="#"><img style="height: 70px;float: left" src="images/movie-title.png" alt=""/></a>
+            <ul>
+                <li><a style="font-size: 25px" href="More-Movie.html">热门电影</a></li>
+                <li><a href="#">觅寻大电影</a></li>
+                <li>|</li>
+                <li><a href="#">觅寻独播</a></li>
+                <li>|</li>
+                <li><a href="#">觅寻自制</a></li>
+                <li>|</li>
+                <li><a href="More-Movie.html">更多分类>></a></li>
+            </ul>
+        </div>
+        <div class="movie-left">
+            <a href="More-Movie.html" style="width:425px;height: 380px;display: inline-block;overflow: hidden"><img style="width:425px;height: 380px;" src="images/movie-left.jpg" alt=""/></a>
+        </div>
+        <div class="movie-right" style="position: relative">
+            <ul class="move-right-pic">
+                <li><a href="More-Movie.html"><img src="images/movie-right01.jpg" alt=""/></a></li>
+                <li><a href="More-Movie.html"><img src="images/movie-right02.jpg" alt=""/></a></li>
+                <li><a href="More-Movie.html"><img src="images/movie-right03.jpg" alt=""/></a></li>
+                <li><a href="More-Movie.html"><img src="images/movie-right04.jpg" alt=""/></a></li>
+                <li><a href="More-Movie.html"><img src="images/movie-right05.jpg" alt=""/></a></li>
+                <li><a href="More-Movie.html"><img src="images/movie-right06.jpg" alt=""/></a></li>
+            </ul>
+            <div class="movie-describe-top">
+                <a href="More-Movie.html">妖邪屠戮天下</br>是是非非谁来主宰</a>
+                <a href="More-Movie.html">特工命悬一线<br>看勒东如何放手一搏</a>
+                <a href="More-Movie.html">半妖皇帝为祸人间<br>何人为民斩妖除魔</a>
+            </div>
+            <div class="movie-describe-bottom">
+                <a href="More-Movie.html">妖邪屠戮天下</br>是是非非谁来主宰</a>
+                <a href="More-Movie.html">特工命悬一线<br>看勒东如何放手一搏</a>
+                <a href="More-Movie.html">半妖皇帝为祸人间<br>何人为民斩妖除魔</a>
+            </div>
+        </div>
+    </div>
+    <div class="fgx w"></div>
+    <!--电子商务-->
+    <div class="content-phone w" style="">
+        <div class="phone-title">
+            <a href="#"><img style="height: 70px;float: left" src="images/phone-title.png" alt=""/></a>
+            <ul>
+                <li><a style="font-size: 25px" href="More-Phone.html">热门产品</a></li>
+                <li><a href="More-Phone.html">小米电视</a></li>
+                <li>|</li>
+                <li><a href="More-Phone.html">小米手机</a></li>
+                <li>|</li>
+                <li><a href="More-Phone.html">小米音响</a></li>
+                <li>|</li>
+                <li><a href="More-Phone.html">更多分类>></a></li>
+            </ul>
+        </div>
+        <div class="phone-show">
+            <ul style="cursor: pointer">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="fgx w" style="margin-top: 10px"></div>
+    <!--游戏-->
+    <div class="content-game w">
+        <div class="game-title">
+            <a href="More-Game.html"><img style="height: 70px;float: left" src="images/game-title.png" alt=""/></a>
+            <ul>
+                <li><a style="font-size: 25px" href="More-Game.html">热门游戏</a></li>
+                <li><a href="More-Game.html">英雄联盟</a></li>
+                <li>|</li>
+                <li><a href="More-Game.html">绝地求生</a></li>
+                <li>|</li>
+                <li><a href="More-Game.html">穿越火线</a></li>
+                <li>|</li>
+                <li><a href="More-Game.html">更多分类>></a></li>
+            </ul>
+        </div>
+        <div class="game-show w">
+            <div class="gName">
+                <li><span style="background-color: #ff4e00"></span><a href="More-Game.html">　　TGA</a></li>
+                <li><span style="background-color: #ffce02"></span><a href="More-Game.html">　　泛娱乐</a></li>
+                <li><span style="background-color: #4c8502"></span><a href="More-Game.html">　　爱心联盟</a></li>
+                <li><span style="background-color: #009cff"></span><a href="More-Game.html">　　游戏公会</a></li>
+                <li><span style="background-color: #a19fea"></span><a href="More-Game.html">　　嘉年华</a></li>
+            </div>
+            <div class="gPic">
+                <ul style="cursor: pointer">
+                    <li><a href="More-Game.html"></a><img src="images/game01.jpg"></li>
+                    <li><a href="More-Game.html"></a><img src="images/game02.jpg"></li>
+                    <li><a href="More-Game.html"></a><img src="images/game03.jpg"></li>
+                    <li><a href="More-Game.html"></a><img src="images/game04.jpg"></li>
+                    <li><a href="More-Game.html"></a><img src="images/game05.jpg"></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="fgx w" style="margin-top: 20px"></div>
+    <!--演出-->
+    <div class="content-concert w">
+        <div class="concert-title">
+            <a href="More-Concert.html"><img style="height: 70px;float: left" src="images/concert-title.png" alt=""/></a>
+            <ul>
+                <li><a style="font-size: 25px" href="More-Concert.html">爱豆演出</a></li>
+                <li><a href="More-Concert.html">音乐会</a></li>
+                <li>|</li>
+                <li><a href="More-Concert.html">演唱会</a></li>
+                <li>|</li>
+                <li><a href="More-Concert.html">情景话剧</a></li>
+                <li>|</li>
+                <li><a href="More-Concert.html">更多分类>></a></li>
+            </ul>
+        </div>
+        <div class="concert-show" style="position: relative;overflow: hidden;">
+            <ul class="concert-show-pic clearfix" >
+                <li><a href="More-Concert.html"><img src="images/concert01.jpg" alt=""/></a></li>
+                <li><a href="More-Concert.html"><img src="images/concert02.jpg" alt=""/></a></li>
+                <li><a href="More-Concert.html"><img src="images/concert03.jpg" alt=""/></a></li>
+                <li><a href="More-Concert.html"><img src="images/concert04.jpg" alt=""/></a></li>
+                <li><a href="More-Concert.html"><img src="images/concert05.jpg" alt=""/></a></li>
+                <li><a href="More-Concert.html"><img src="images/concert06.jpg" alt=""/></a></li>
+                <li><a href="More-Concert.html"><img src="images/concert07.jpg" alt=""/></a></li>
+                <li><a href="More-Concert.html"><img src="images/concert08.jpg" alt=""/></a></li>
+            </ul>
+
+            <div class="concert-describe-top">
+                <a href="More-Concert.html">2018年汪峰岁月循环演唱会<br>5月26日19.45黄龙体育场</a>
+                <a href="More-Concert.html">2018年好诶没南京站演唱会<br>黄龙站的视听盛宴</a>
+                <a href="More-Concert.html">Classic2018张学友杭州站<br>5.11日柳州等你嗨翻天</a>
+                <a href="More-Concert.html" style="margin-left: 40px">蒋公的面子话剧表演<br>6.21日江苏武进体育馆</a>
+            </div>
+            <div class="concert-describe-bottom">
+                <a href="More-Concert.html">2018年汪峰岁月循环演唱会<br>5月26日19.45黄龙体育场</a>
+                <a href="More-Concert.html">2018年汪峰岁月循环演唱会<br>5月26日19.45黄龙体育场</a>
+                <a href="More-Concert.html">2018年汪峰岁月循环演唱会<br>5月26日19.45黄龙体育场</a>
+                <a href="More-Concert.html" style="margin-left: 40px">2018年汪峰岁月循环演唱会<br>5月26日19.45黄龙体育场</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+</div>
+
+<!--content部分end-->
+
+
+
+<!--site-nav部分start-->
+<!--site-nav部分end-->
+
+<!--footer部分start-->
+<div class="footer">
+    <div class="return-top">
+        <img src="images/return-top.png" alt="" title="返回顶部"/>
+    </div>
+    <div class="footer-top">
+        <div class="w footer-top-slogen">
+            <span class="footer-top-slogen-icon footer-top-slogen-icon1"><img src="images/slogen1.png" alt=""/></span>
+            <span class="footer-top-slogen-icon footer-top-slogen-icon2"><img src="images/slogen2.png" alt=""/></span>
+            <span class="footer-top-slogen-icon footer-top-slogen-icon3"><img src="images/slogen3.png" alt=""/></span>
+            <span class="footer-top-slogen-icon footer-top-slogen-icon4"><img src="images/slogen4.png" alt=""/></span>
+        </div>
+        <div class="w footer-top-shopping clearfix">
+            <dl>
+                <dt>购物指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>配送方式</dt>
+                <dd><a href="#">上门自提</a></dd>
+                <dd><a href="#">211限时达</a></dd>
+                <dd><a href="#">配送服务查询</a></dd>
+                <dd><a href="#">配送费收取标准</a></dd>
+                <dd><a href="#">海外配送</a></dd>
+            </dl>
+            <dl>
+                <dt>购物指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>购物指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl class="last-dl">
+                <dt>购物指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <div class="coverage">
+                <h3>觅寻自营覆盖区县</h3>
+
+                <p>觅寻已向全国2654个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+                <a href="#">查看详情 ></a>
+            </div>
+        </div>
+    </div>
+    <div class="w footer-bottom">
+        <div class="footer-bottom-links">
+            <a href="#">关于我们</a>|
+            <a href="#">联系我们</a>|
+            <a href="#">联系客服</a>|
+            <a href="#">商家入驻</a>|
+            <a href="#">营销中心</a>|
+            <a href="#">手机觅寻</a>|
+            <a href="#">友情链接</a>|
+            <a href="#">销售联盟</a>|
+            <a href="#">觅寻社区</a>|
+            <a href="#">觅寻公益</a>|
+            <a href="#">English Site</a>|
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-bottom-copyright">
+            <img src="images/guohui.png"/>京公网安备 11000002000088号 | 京ICP证070359号 | 互联网药品信息服务资格证编号(京)-经营性-2014-0008 | 新出发京零
+            字第大120007号<br>
+            互联网出版许可证编号新出网证(京)字150号 | 出版物经营许可证 | 网络文化经营许可证京网文[2014]2148-348号 | 违法和不良信息举报电话：4006561155<br>
+            Copyright © 2004 - 2016 觅寻JD.com 版权所有 | 消费者维权热线：4006067733<br>
+            觅寻旗下网站：觅寻钱包
+        </div>
+        <div class="footer-bottom-img">
+            <a href="#"><img src="images/img1.jpg"/></a>
+            <a href="#"><img src="images/img1.jpg"/></a>
+            <a href="#"><img src="images/img1.jpg"/></a>
+            <a href="#"><img src="images/img1.jpg"/></a>
+            <a href="#"><img src="images/img1.jpg"/></a>
+            <a href="#"><img src="images/img1.jpg"/></a>
+        </div>
+    </div>
+</div>
+<!--footer部分end-->
+
+</body>
+</html>
