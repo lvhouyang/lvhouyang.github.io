@@ -137,7 +137,7 @@ $(function(){
     })
     //直接登录
     $("#Tologin").click(function () {
-        window.location.href = "index.html?count=1";
+        window.location.href = "mixun.html?count=1";
     })
 
 })

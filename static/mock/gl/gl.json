@@ -1,0 +1,645 @@
+{
+	"isLogin": false,
+	"isShowCashBack": "true",
+	"isShowMobileSearchOrder": "true",
+	"channelCode": "qunar",
+	"isBaiduLogin": false,
+	"isShowReturnQunarHomePage": "true",
+	"data": {
+		"region": "桂林",
+		"travelList": [
+			{
+				"title": "暑期早订",
+				"imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/667757f979fa38b12c4986f9930b6695.jpg_750x200_6cca7add.jpg",
+				"url": "https://zt.dujia.qunar.com/zts/2019519/touch.php?cat=from_value%3DTOPIC-%E6%9A%91%E6%9C%9F%E6%97%A9%E8%AE%A2%26from_area%3Dts_topic%26dist_city%3D%E6%A1%82%E6%9E%97%26from_index%3D1&in_track=app_ticket_banner01&et=app_ticket_banner01"
+			},
+			{
+				"title": "1元门票",
+				"imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg",
+				"url": "https://sale.piao.qunar.com/touch/mk/special.htm?cat=from_value%3DTOPIC-1%E5%85%83%E9%97%A8%E7%A5%A8%26from_area%3Dts_topic%26dist_city%3D%E6%A1%82%E6%9E%97%26from_index%3D2"
+			},
+			{
+				"title": "必游榜单",
+				"imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg",
+				"url": "https://sale.piao.qunar.com/touch/topic/mk/t_2916.htm?cat=from_value%3DTOPIC-%E5%BF%85%E6%B8%B8%E6%A6%9C%E5%8D%95%26from_area%3Dts_topic%26dist_city%3D%E6%A1%82%E6%9E%97%26from_index%3D3"
+			},
+			{
+				"title": "石门仙湖",
+				"imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/4f387f89c3c5edbc5a6b20d3b474b985.jpg_750x200_fd2e7a28.jpg",
+				"url": "https://touch.piao.qunar.com/touch/detail.htm?id=199378&cat=from_value%3DPOI-199378%26from_area%3Dts_topic%26dist_city%3D%E6%A1%82%E6%9E%97%26from_index%3D4"
+			},
+			{
+				"title": "乐满地品毕业",
+				"imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20192/7524e86f3404d74c79ab5261c19ba4f8.jpg_750x200_0bf8dda0.jpg",
+				"url": "https://touch.piao.qunar.com/touch/detail.htm?id=6287&cat=from_value%3DPOI-6287%26from_area%3Dts_topic%26dist_city%3D%E6%A1%82%E6%9E%97%26from_index%3D5"
+			}
+		],
+		"hotSale": {
+			"title": "本周热门榜单",
+			"desc": "全部榜单",
+			"scheme": "http://touch.piao.qunar.com/touch/weekHotSales.htm?cityName=桂林",
+			"imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/16/bfbb9874e8f11402.png",
+			"hotSaleList": [
+				{
+					"id": "14566",
+					"title": "龙脊梯田",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=14566&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1512/fe/fe08d17ffe7d036b90.water.jpg_250x250_77032a37.jpg",
+					"iconUrl": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+					"qunarPrice": "80"
+				},
+				{
+					"id": "4815",
+					"title": "漓江",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=4815&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p57/201211/08/c42f2e7088a8a11093835fbb.jpg_250x250_08ef5328.jpg",
+					"iconUrl": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+					"qunarPrice": "19.5"
+				},
+				{
+					"id": "15686",
+					"title": "印象刘三姐",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=15686&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201301/11/c3999da09f538f9f93835fbb.jpg_250x250_815945c5.jpg",
+					"iconUrl": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
+					"qunarPrice": "168"
+				},
+				{
+					"id": "31980",
+					"title": "桂林两江四湖景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=31980&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1809/2f/2fdd8fb4dae74701a3.water.jpg_250x250_112383cc.jpg",
+					"qunarPrice": "62"
+				},
+				{
+					"id": "11251",
+					"title": "银子岩",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=11251&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201403/07/a47369acdec386e923b3713c2c8b9b21.jpg_250x250_37165821.jpg",
+					"qunarPrice": "60"
+				},
+				{
+					"id": "465036",
+					"title": "金佛顶观景点",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=465036&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1707/53/5352dbcaeea0106ca3.water.jpg_250x250_febabac5.jpg",
+					"qunarPrice": "20"
+				},
+				{
+					"id": "6675",
+					"title": "象山景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=6675&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1709/f8/f8faa3df62df0668a3.water.jpg_250x250_d2f2cd32.jpg",
+					"qunarPrice": "51"
+				},
+				{
+					"id": "198976",
+					"title": "漓江逍遥湖景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=198976&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1411/30/a423d08c4415ef7dd4efa6a924c0c8d7.water.jpg_250x250_8dbc585b.jpg",
+					"qunarPrice": "8"
+				},
+				{
+					"id": "456577",
+					"title": "漓江竹筏精华游-杨堤段",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=456577&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1512/e2/e2f6817f16aaa34d90.water.jpg_250x250_4a985ca5.jpg",
+					"qunarPrice": "110"
+				},
+				{
+					"id": "6993",
+					"title": "芦笛岩",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=6993&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1501/c5/c5cb94e3f3a8fad9.water.jpg_250x250_80245ea4.jpg",
+					"qunarPrice": "22"
+				}
+			]
+		},
+		"guessULike": {
+			"title": "猜你喜欢",
+			"imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png",
+			"scheme": "//touch.piao.qunar.com/touch/list_桂林_景点门票.html",
+			"guessList": [
+				{
+					"title": "九马画山",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=3514698530&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201301/09/35dc7ae06518ab5493835fbb.jpg_200x200_48d378b1.jpg",
+					"commentCount": "451条评论",
+					"avgScore": "4.5",
+					"qunarPrice": "2688",
+					"bookingTag": {
+						"label": "可订今日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "阳朔县",
+					"explain": "自古山如画，如今画似山"
+				},
+				{
+					"title": "燕莎热气球滑翔伞飞行",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=971912526&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1803/7c/7c9985e82b4ff320a3.img.jpg_200x200_89d5b9af.jpg",
+					"commentCount": "263条评论",
+					"avgScore": "4.9",
+					"qunarPrice": "99",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "漓江四星级游船",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2598177660&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1504/3d/3d6fe040a67c0205.water.jpg_200x200_12098fcf.jpg",
+					"commentCount": "798条评论",
+					"avgScore": "4.7",
+					"qunarPrice": "360",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "漓江"
+				},
+				{
+					"title": "龙颈河漂流",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=3762217049&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201406/23/fa1dfab481914b78ba37ec1de0cc8f60.jpg_200x200_dcd6afc8.jpg",
+					"commentCount": "1381条评论",
+					"avgScore": "4.9",
+					"qunarPrice": "160",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "阳朔县",
+					"explain": "这里最近很火哦，好多人都在点评它呢！"
+				},
+				{
+					"title": "漓江三星级游船",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=1224538966&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1504/64/648f4ea360e37bf0.water.png_200x200_934064f7.png",
+					"commentCount": "1466条评论",
+					"avgScore": "4.9",
+					"qunarPrice": "235",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "漓江",
+					"explain": "岩溶山水游览区"
+				},
+				{
+					"title": "印象刘三姐",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=177865702&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201301/11/c3999da09f538f9f93835fbb.jpg_200x200_c03d784a.jpg",
+					"commentCount": "13588条评论",
+					"avgScore": "4.7",
+					"qunarPrice": "168",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "阳朔县",
+					"explain": "中国第一部“山水实景演出”"
+				},
+				{
+					"title": "遇龙河",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=3385672069&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201407/09/dc85c8576d5f6f1b8a04ca3022b9028b.jpg_200x200_12c06667.jpg",
+					"commentCount": "6862条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "40",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "阳朔天籁蝴蝶泉",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=3311675579&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1409/03/ba1f56044d9ff521e853e5313cbcfbf5.jpg_200x200_cc7f5402.jpg",
+					"commentCount": "3175条评论",
+					"avgScore": "4.7",
+					"qunarPrice": "45",
+					"bookingTag": {
+						"label": "可订今日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "桂林尧山景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=718445842&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1507/33/239d64ad6782599ddcc9de367b604920.water.jpg_200x200_ddbe0efa.jpg",
+					"commentCount": "1143条评论",
+					"avgScore": "4.7",
+					"qunarPrice": "50",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "叠彩区",
+					"explain": "以变幻莫测、绚丽多彩的四时景致闻名于世"
+				},
+				{
+					"title": "龙脊梯田",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=1141263143&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1512/fe/fe08d17ffe7d036b90.water.jpg_200x200_d58537ca.jpg",
+					"commentCount": "8799条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "80",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "龙胜县"
+				},
+				{
+					"title": "桂林乐满地主题乐园",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=3024535283&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1708/13/138bb8ef644d4ba0a3.water.jpg_200x200_62cd0b29.jpg",
+					"commentCount": "12103条评论",
+					"avgScore": "4.9",
+					"qunarPrice": "38",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "兴安县",
+					"explain": "以浪漫与快乐为名"
+				},
+				{
+					"title": "阳朔世外桃源景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=311895735&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201405/29/bb3498180d5d9c516c3bc33dc96efda7.jpg_200x200_3441adf4.jpg",
+					"commentCount": "5722条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "57",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "漓江竹筏精华游-杨堤段",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=1716586632&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1512/e2/e2f6817f16aaa34d90.water.jpg_200x200_5973263e.jpg",
+					"commentCount": "561条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "110",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "漓江",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=3678713220&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p57/201211/08/c42f2e7088a8a11093835fbb.jpg_200x200_fedca0eb.jpg",
+					"commentCount": "8652条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "19.5",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "灵川县",
+					"explain": "桂林本月收藏Top5╰(￣▽￣)╭"
+				},
+				{
+					"title": "古东瀑布",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2820160355&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201401/20/30b3453b9ef19bd6dab67bf785aacda2.jpg_200x200_f3242fac.jpg",
+					"commentCount": "1619条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "54.8",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "灵川县",
+					"explain": "满城桂花香，好汉苍翠的原始森林"
+				},
+				{
+					"title": "象山景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2898718562&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1709/f8/f8faa3df62df0668a3.water.jpg_200x200_48b965f2.jpg",
+					"commentCount": "22559条评论",
+					"avgScore": "4.7",
+					"qunarPrice": "51",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "象山区",
+					"explain": "一头驻足漓江，饮水休憩 的“大象”"
+				},
+				{
+					"title": "冠岩地下河景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=817791243&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201212/25/3e81593ec4b3e9d193835fbb.jpg_200x200_e0a7a062.jpg",
+					"commentCount": "1576条评论",
+					"avgScore": "4.7",
+					"qunarPrice": "50",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "雁山区"
+				},
+				{
+					"title": "桂林千古情景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=95647188&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1807/e7/e71ac5931b3f77c2a3.water.jpg_200x200_91be263c.jpg",
+					"commentCount": "1048条评论",
+					"avgScore": "4.9",
+					"qunarPrice": "30",
+					"area": "桂林",
+					"explain": "再现桂林民族风情。"
+				},
+				{
+					"title": "黄布倒影",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2150508665&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201307/19/cac4f2380d9fd6aac8d65eac.jpg_200x200_010e3aff.jpg",
+					"commentCount": "286条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "2688",
+					"bookingTag": {
+						"label": "可订今日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "图腾古道",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2476829498&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1503/b9/b95fa4e7aaf89b80.water.jpg_200x200_c261cbf2.jpg",
+					"commentCount": "1596条评论",
+					"avgScore": "4.6",
+					"qunarPrice": "34.1",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "相公山",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2597256277&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1504/6d/6d44377c8449a7a5.water.jpg_200x200_cae0b0b5.jpg",
+					"commentCount": "226条评论",
+					"avgScore": "4.9",
+					"qunarPrice": "85",
+					"area": "阳朔县"
+				},
+				{
+					"title": "遇龙河漂流金龙桥码头",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2355128975&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201307/11/170daa69200190f7c8d65eac.jpg_200x200_b1573211.jpg",
+					"commentCount": "889条评论",
+					"avgScore": "4.9",
+					"qunarPrice": "288",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "遇龙河",
+					"explain": "\uD83D\uDD25好评如潮，小伙伴热推景点~"
+				},
+				{
+					"title": "七星景区",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=2626479041&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1409/24/b6d0a81dbbc68fee8c92999881a812fd.jpg_200x200_2705e0f7.jpg",
+					"commentCount": "6130条评论",
+					"avgScore": "4.7",
+					"qunarPrice": "55",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "七星区"
+				},
+				{
+					"title": "金水岩",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=498056592&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/201301/10/d0379c614fffeec293835fbb.jpg_200x200_1e341631.jpg",
+					"commentCount": "537条评论",
+					"avgScore": "4.5",
+					"qunarPrice": "99",
+					"bookingTag": {
+						"label": "可订明日",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+					},
+					"area": "阳朔县"
+				},
+				{
+					"title": "永福温泉",
+					"scheme": "http://touch.piao.qunar.com/touch/detail.htm?id=3346474620&from=as_recommend_sight",
+					"imgUrl": "http://img1.qunarzz.com/sight/p0/1411/6d/1e670867d1cc5c8ac2a4573b05148040.water.jpg_200x200_1c38fb8b.jpg",
+					"commentCount": "342条评论",
+					"avgScore": "4.8",
+					"qunarPrice": "45",
+					"bookingTag": {
+						"label": "随买随用",
+						"icon": "https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png"
+					},
+					"area": "桂林金钟..."
+				}
+			]
+		},
+		"activityList": [],
+		"skuList": [
+			{
+				"skuId": "157",
+				"title": "桂林必打卡",
+				"desc": "桂林山水甲天下",
+				"area": [
+					"桂林"
+				],
+				"imgUrl": "http://img1.qunarzz.com/sight/source/1505/24/f947f286f2cf61.jpg_r_640x214_46fb6378.jpg",
+				"url": "//touch.piao.qunar.com/touch/toSku.htm?skuId=157&cityName=桂林",
+				"sightIds": [
+					4815,
+					6675,
+					6993,
+					9354,
+					9718,
+					11251,
+					15686,
+					31942,
+					31980
+				]
+			},
+			{
+				"skuId": "453",
+				"title": "秘境广西",
+				"desc": "想知道真实的桂林之景和作者笔下的桂林有差别吗？快来揭晓你心中那个未知之谜吧\n",
+				"area": [
+					"北海",
+					"桂林",
+					"来宾",
+					"钦州",
+					"防城港",
+					"南宁",
+					"柳州",
+					"贵港",
+					"河池",
+					"贺州",
+					"梧州",
+					"玉林",
+					"百色",
+					"崇左"
+				],
+				"imgUrl": "http://img1.qunarzz.com/sight/source/1509/b0/83481d0d95a39b.jpg_r_640x214_7dc3d605.jpg",
+				"url": "//touch.piao.qunar.com/touch/toSku.htm?skuId=453&cityName=桂林",
+				"sightIds": [
+					828,
+					6441,
+					12112,
+					37587,
+					38332,
+					38494,
+					39148
+				]
+			},
+			{
+				"skuId": "161",
+				"title": "登山赏美景",
+				"desc": "象鼻山的景色犹如人间仙境，让人流连忘返，在这里可以饱览漓江美不胜收的全景 \n",
+				"area": [
+					"桂林"
+				],
+				"imgUrl": "http://img1.qunarzz.com/sight/source/1505/4b/719ef55ffb66e4.jpg_r_640x214_9891a20c.jpg",
+				"url": "//touch.piao.qunar.com/touch/toSku.htm?skuId=161&cityName=桂林",
+				"sightIds": [
+					461,
+					6675,
+					7421,
+					8176,
+					8512,
+					10890,
+					15288,
+					31236,
+					187182,
+					214214
+				]
+			},
+			{
+				"skuId": "159",
+				"title": "醉美溶洞",
+				"desc": "带上心爱的她或约三五好友一起去寻找桂林最美丽的溶洞，感受大自然的奇妙造化~\n",
+				"area": [
+					"桂林"
+				],
+				"imgUrl": "http://img1.qunarzz.com/sight/source/1505/f4/aeec6eb410f882.jpg_r_640x214_b5fbb661.jpg",
+				"url": "//touch.piao.qunar.com/touch/toSku.htm?skuId=159&cityName=桂林",
+				"sightIds": [
+					893,
+					1755,
+					6993,
+					9718,
+					11251,
+					11949,
+					35359
+				]
+			},
+			{
+				"skuId": "158",
+				"title": "漂流游桂林",
+				"desc": "澎湃激昂的震撼，畅快淋漓的戏水",
+				"area": [
+					"桂林"
+				],
+				"imgUrl": "http://img1.qunarzz.com/sight/source/1505/15/77e75233eb0db3.jpg_r_640x214_30cf440c.jpg",
+				"url": "//touch.piao.qunar.com/touch/toSku.htm?skuId=158&cityName=桂林",
+				"sightIds": [
+					6402,
+					9354,
+					9969,
+					15764,
+					39840,
+					191202
+				]
+			}
+		],
+		"tagList": [
+			{
+				"title": "景点门票",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+				"url": "https://touch.piao.qunar.com/touch/list_桂林_景点门票.html",
+				"keyword": "景点门票"
+			},
+			{
+				"title": "桂林必游",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+				"url": "https://sale.piao.qunar.com/touch/topic/mk/t_2937.htm"
+			},
+			{
+				"title": "一日游",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+				"url": "http://touch.piao.qunar.com/touch/list.htm?limitCondition=oneDayTour&region=桂林&cityName=桂林&keyword=一日游"
+			},
+			{
+				"title": "桂林千古情",
+				"imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/d0d5193d367d6ff931fc9956a10e8155.png",
+				"url": "http://touch.piao.qunar.com/touch/detail_468964.html"
+			},
+			{
+				"title": "水上乐园",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+				"url": "https://touch.piao.qunar.com/touch/list_桂林_水上乐园.html",
+				"keyword": "水上乐园"
+			},
+			{
+				"title": "游船观光",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/89/55083b0f1951f302.png",
+				"url": "https://touch.piao.qunar.com/touch/list_桂林_游船.html",
+				"keyword": "游船"
+			},
+			{
+				"title": "文化古迹",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+				"url": "https://touch.piao.qunar.com/touch/list_桂林_文化古迹.html",
+				"keyword": "文化古迹"
+			},
+			{
+				"title": "漂流",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/75/eca3ce656c886502.png",
+				"url": "https://touch.piao.qunar.com/touch/list_桂林_漂流.html",
+				"keyword": "漂流"
+			},
+			{
+				"title": "玻璃栈道",
+				"imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png",
+				"url": "https://touch.piao.qunar.com/touch/list_桂林_悬空观景.html",
+				"keyword": "悬空观景"
+			},
+			{
+				"title": "靖江王城",
+				"imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/f428f0f2b3a19bf0a504d3534d2b152a.png",
+				"url": "http://touch.piao.qunar.com/touch/detail_7421.html"
+			}
+		],
+		"overSea": {
+			"title": "必游榜单",
+			"imgUrl": "http://img1.qunarzz.com/piao/fusion/1503/1c/376776fb89b8e0.png",
+			"url": "https://sale.piao.qunar.com/touch/topic/mk/t_2916.htm?cat=from_area%3Dts_tuiguang"
+		}
+	},
+	"isFromBaidu": false,
+	"isNeedOrderAcountSync": "true",
+	"isShowUnPayOrderAlarm": "true",
+	"isShowFooter": "true",
+	"isShowLogin": "true",
+	"hasLocalOrderAbility": "true",
+	"isApp": false,
+	"isShowConsumer": "true",
+	"isShowSearchOrder": "true",
+	"isBaiduApp": false,
+	"isShowHeader": "true",
+	"isShowAppDownLoadLayer": "true",
+	"isShowContact": "true"
+}
