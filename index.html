@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,24 +27,30 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* background: url(images/RegisterLogo.jpg) no-repeat; */
+            background: url(images/bgpic.jpg) no-repeat;
             background-size: contain;
             background-size: 100% 100%
         }
+
         .tip {
             position: fixed;
             left: 50%;
             top: 50%;
             z-index: 99999;
-            transform: translate(-50%,-50%) !important;
+            transform: translate(-50%, -50%) !important;
             font-size: .15rem;
-            background-color: rgba(0,0,0,.6);
+            background-color: rgba(0, 0, 0, .6);
             color: #fff;
             border-radius: 5px;
             padding: .1rem .1rem
         }
 
         @media screen and (min-width:600px) {
+            .cover-all {
+                background: url(images/bgpic.jpg) repeat;
+                background-size: contain;
+                background-size: 100% 100%;
+            }
 
             .toMb,
             .toPc {
@@ -54,16 +60,25 @@
                 line-height: 2.5rem;
                 color: #fff;
                 border-radius: .5rem;
-                margin: 30px 0;
+                margin: .3rem 0;
                 text-align: center;
                 font-weight: 600px;
                 font-size: .5rem;
                 transition: all 1s ease-in-out;
                 cursor: pointer;
             }
+
+            .container {
+                bottom: 0 !important;
+            }
         }
 
         @media screen and (max-width:599px) {
+            .cover-all {
+                background: url(images/bgpic-s.png) repeat;
+                background-size: contain;
+                background-size: 100% 100%;
+            }
 
             .toMb,
             .toPc {
@@ -73,12 +88,16 @@
                 line-height: 1.25rem;
                 color: #fff;
                 border-radius: .3rem;
-                margin: 30px 0;
+                margin: .3rem 0;
                 text-align: center;
                 font-weight: 600px;
                 font-size: .3rem;
                 transition: all 1s ease-in-out;
                 cursor: pointer;
+            }
+
+            .container {
+                transform: scale(.7) !important;
             }
         }
 
@@ -93,24 +112,111 @@
         }
 
         .toMb:hover {
-            transform: rotate(180deg)
+            transform: rotate(180deg);
         }
 
         .toPc:hover {
-            transform: rotate(-180deg)
+            transform: rotate(-180deg);
         }
 
         .welcome {
             transform: translate(0);
+        }
+
+        .container {
+            bottom: .25rem;
+            position: fixed;
+            width: 6.3rem;
+            overflow: hidden;
+            height: 2rem;
+        }
+
+        .container div {
+            position: absolute;
+            width: 2rem;
+            height: 1.8rem;
+        }
+
+        .wk {
+            background: url(images/wk.png) 0 0 no-repeat;
+            animation: wkz 1s steps(8) infinite;
+            left: 0;
+        }
+
+        .bj {
+            left: 1.5rem;
+            background: url(images/bj.png) 0 0 no-repeat;
+            animation: bjz 1s steps(8) infinite;
+        }
+
+        .ts {
+            width: 1.7rem !important;
+            left: 2.62rem;
+            top: -0.21rem;
+            transform: scale(.8);
+            background: url(images/ts.png) 0 0 no-repeat;
+            animation: tsz 1s steps(8) infinite;
+        }
+
+        .ss {
+            left: 3.93rem;
+            background: url(images/ss.png) 0 0 no-repeat;
+            animation: ssz 1s steps(8) infinite;
+        }
+
+        @keyframes wkz {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: -1600px 0
+            }
+        }
+
+        @keyframes bjz {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: -1600px 0
+            }
+        }
+
+        @keyframes tsz {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: -1360px 0
+            }
+        }
+
+        @keyframes ssz {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: -1680px 0
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="cover-all">
-        <div class="toMb">移动端去哪儿(Vue)</div>
+        <div class="toMb">移动端去哪儿</div>
         <div class="toPc">PC端觅寻网</div>
         <div class="tip" style="display: none"></div>
+        <div class="container clearfix">
+            <div class="wk"></div>
+            <div class="bj"></div>
+            <div class="ts"></div>
+            <div class="ss"></div>
+        </div>
     </div>
     <script>
         $(function () {
@@ -118,23 +224,22 @@
                 var txt = '';
                 var target = e.target || e.srcElement;
                 var url = '';
-                if(target.className.indexOf('toMb') > -1){
+                if (target.className.indexOf('toMb') > -1) {
                     txt = '即将跳转到移动端去哪儿页面，PC端请进入手机模拟器运行~';
                     url = 'qunar.html';
-                }else if(target.className.indexOf('toPc') > -1){
+                } else if (target.className.indexOf('toPc') > -1) {
                     txt = '即将跳转到PC端觅训网页面，建议使用PC端访问~';
                     url = 'mixun.html';
                 }
-                if(!txt){
+                if (!txt) {
                     return false;
                 }
                 $('.tip').text(txt);
                 $('.tip').fadeIn('slow');
-                $('.tip').fadeIn('slow');
-                setTimeout(function(){
+                setTimeout(function () {
                     $('.tip').fadeOut('slow');
                     window.location.href = url;
-                },2000  );
+                }, 2000);
             });
         })
 
