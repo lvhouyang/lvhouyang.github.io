@@ -24,17 +24,17 @@
     </style>
     <script>
         $(function () {
-            $('.mbTip').fadeIn('slow');
-            setTimeout(function () {
-                $('.mbTip').fadeOut('slow');
-            }, 2000);
+            if (navigator.platform.indexOf('Win32') != -1) {
+                alert('PC端建议使用手机模拟器访问哦。')
+            } else {
+                // go to 手机 
+            }
         })
     </script>
 </head>
 
 <body>
     <div id=app>
-        <div class="mbTip" style="display: none">123</div>
     </div>
     <script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js> </script> <script
         type=text/javascript src=./static/js/vendor.1f880ce700b61786c276.js> </script> <script type=text/javascript
