@@ -14,11 +14,37 @@
     <script src="js/pic.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
-   
+    <style>
+        .tip {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            z-index: 99999;
+            transform: translate(-50%, -50%) !important;
+            font-size: .15rem;
+            background-color: rgba(0, 0, 0, .6);
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+     <script>
+        $(function () {
+            if (navigator.platform.indexOf('Win32') != -1) {
+               
+            } else {
+                $('.tip').fadeIn('slow');
+                setTimeout(function () {
+                    $('.tip').fadeOut('slow');
+                }, 2000);
+            }
+        })
+    </script>
 </head>
 <body>
 
 <div class="mask"></div>
+<div class="tip" style="display: none">建议使用PC端访问~</div>
 <!--site-nav部分start-->
 <div class="site-nav">
     <div class="w">
