@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小小米</title>
+    <link rel="stylesheet" href="css/mibase.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet/less" href="css/index.less"> -->
+    <link rel="icon" href="images/log.png">
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script> -->
+    <script src="plugin/jquery-3.3.1.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        $(function () {
+            if (navigator.platform.indexOf('Win32') != -1) {
+               
+            } else {
+                $.fn.toast('该页面为pc端页面，建议使用pc端访问哦',3000);
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="cover"></div>
+    <div class="login">
+        <div class="login-type">
+            <a class="pass-login on">账号登录</a>
+            <a class="ewm-login">扫码登录</a>
+        </div>
+        <div class="form">
+            <div class="pass">
+                <input id="userId" type="text" placeholder="邮箱/手机号码/小米ID"><br>
+                <input id="password" type="password" placeholder="密码">
+                <div class="yzm clearfix">
+                    <input id="input-yzm" type="text" placeholder="请输入右侧验证码" style="width: 60%"><span title="点击切换验证码" id="yzm"></span>
+                </div>
+            </div>
+            <div class="message" style="display: none">
+                <input type="text" placeholder="请输入您的手机号码"><br>
+                <div class="yzm clearfix">
+                    <input type="text" placeholder="请输入短信验证码" style="width: 60%"><span id="teleYzm" class="getYzm"
+                        title="获取验证码">获取验证码</span>
+                </div>
+            </div>
+            <a class="login-btn">登录</a>
+            <a class="change">手机短信登录/注册</a>
+        </div>
+        <div class="ewm" style="text-align: center;display:none;margin-top: 20px;">
+            <img src="images/erweima.png" class="noloading" alt="">
+        </div>
+
+    </div>
+    <header>
+        <div class="xxm clearfix">
+            <div class="header_left">
+                <ul class="left_item clearfix">
+                    <li><a href="#">小小米商城</a></li>
+                    <li><a href="#">MIUI</a></li>
+                    <li><a href="#">loT</a></li>
+                    <li><a href="#">云服务</a></li>
+                    <li><a href="#">金融</a></li>
+                    <li><a href="#">有品</a></li>
+                    <li><a href="#">小爱开放平台</a></li>
+                    <li><a href="#">企业团购</a></li>
+                    <li><a href="#">资质证照</a></li>
+                    <li><a href="#">规则协议</a></li>
+                    <li><a href="#">下载app</a></li>
+                    <li><a href="#">SelectRegion</a></li>
+                </ul>
+            </div>
+            <div class="header_right">
+                <ul class="right_item clearfix">
+                    <li><a id="login-pop" href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">消息通知</a></li>
+                    <li class="car"><a class="shopcar" href="#"><i class="iconfont mr">&#xe61b;</i>购物车(0)</a>
+                        <div class="maycar">购物车中还没有商品，赶紧选购吧！</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="xxm clearfix">
+            <div class="log">
+                <img src="images/loading.gif" style="" data-src="images/log.png" alt="loading">
+            </div>
+            <div class="nav_item">
+                <ul class="clearfix">
+                    <li><a href="#">小米手机</a></li>
+                    <li><a href="#">Redmi红米</a></li>
+                    <li><a href="#">电视</a></li>
+                    <li><a href="#">笔记本</a></li>
+                    <li><a href="#">家电</a></li>
+                    <li><a href="#">路由器</a></li>
+                    <li><a href="#">智能硬件</a></li>
+                    <li><a class="nochild" href="#">服务</a></li>
+                    <li><a class="nochild" href="#">社区</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="小米9"><a href="#" class="search_btn"><i class="iconfont">&#xe615;</i></a>
+            </div>
+        </div>
+        <div class="list-wraper">
+            <ul class="xxm clearfix">
+                <li class="rt"><span class="tag-new">新品</span><a href="#"><img class="noloading"
+                            src="images/detail-right1.jpg" alt=""></a>
+                    <h4>小米9</h4>
+                    <p class="price">1999元</p>
+                </li>
+                <li class="rt"><span class="tag-discount">减50元</span><a href="#"><img class="noloading"
+                            src="images/detail-right2.jpg" alt=""></a>
+                    <h4>小米9</h4>
+                    <p class="price">1999元</p>
+                </li>
+                <li class="rt"><span class="tag-discount">减80元</span><span class="tag-new">新品</span><a href="#"><img
+                            class="noloading" src="images/detail-right3.jpg" alt=""></a>
+                    <h4>小米9</h4>
+                    <p class="price">1999元</p>
+                </li>
+                <li class="rt"><a href="#"><img class="noloading" src="images/detail-right4.jpg" alt=""></a>
+                    <h4>小米9</h4>
+                    <p class="price">1999元</p>
+                </li>
+                <li class="rt"><span class="tag-new">新品</span><a href="#"><img class="noloading"
+                            src="images/detail-right5.jpg" alt=""></a>
+                    <h4>小米9</h4>
+                    <p class="price">1999元</p>
+                </li>
+                <li><span class="tag-discount">减150元</span><a href="#"><img class="noloading"
+                            src="images/detail-right6.jpg" alt=""></a>
+                    <h4>小米9</h4>
+                    <p class="price">1999元</p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="xxm">
+            <div class="banner">
+                <div class="img-swiper">
+                    <ul class="clearfix">
+                        <li><a href="#"><img src="images/loading.gif" style="" data-src="images/banner_img1.jpg"
+                                    alt="loading"></a> </li>
+                        <li><a href="#"><img src="images/loading.gif" style="" data-src="images/banner_img2.jpg"
+                                    alt="loading"></a> </li>
+                        <li><a href="#"><img src="images/loading.gif" style="" data-src="images/banner_img3.jpg"
+                                    alt="loading"></a> </li>
+                        <li><a href="#"><img src="images/loading.gif" style="" data-src="images/banner_img4.jpg"
+                                    alt="loading"></a> </li>
+                        <li><a href="#"><img src="images/loading.gif" style="" data-src="images/banner_img5.jpg"
+                                    alt="loading"></a> </li>
+                    </ul>
+                    <div class="num-item">
+                        <span class="on"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="left-pic">
+                        <i class="iconfont">&#xe609;</i>
+                    </div>
+                    <div class="right-pic">
+                        <i class="iconfont">&#xe733;</i>
+                    </div>
+                </div>
+                <aside>
+                    <ul>
+                        <li class="cate-item">手机 电话卡<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">电视 盒子<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">笔记本 平板<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">家电 插线板<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">出行 穿戴<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">智能 路由器<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">电源 配件<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">健康 儿童<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">耳机 音箱<i class="iconfont">&#xe733;</i></li>
+                        <li class="cate-item">生活 箱包<i class="iconfont">&#xe733;</i></li>
+                        <div class="cate-children">
+                            <ul class="children-list clearfix">
+
+                            </ul>
+                        </div>
+                    </ul>
+                </aside>
+            </div>
+            <div class="recommend clearfix">
+                <div class="func">
+                    <ul class="clearfix">
+                        <li class="right"><i class="iconfont">&#xe64f;</i><span>选购手机</span></li>
+                        <li class="right"><i class="iconfont">&#xe61c;</i><span>企业团购</span></li>
+                        <li><i class="iconfont">&#xe7dd;</i><span>F码通道</span></li>
+                        <li class="right top"><i class="iconfont">&#xe728;</i><span>米粉卡</span></li>
+                        <li class="right top"><i class="iconfont">&#xe7d9;</i><span>以旧换新</span></li>
+                        <li class="top"><i class="iconfont">&#xe782;</i><span>话费充值</span></li>
+                    </ul>
+                </div>
+                <div class="hot-scale">
+                    <ul>
+                        <li style="margin-left:0px"><a href="#"><img src="images/loading.gif" style=""
+                                    data-src="images/recommend1.jpg" alt="loading"></a></li>
+                        <li><a href="#"><img src="images/loading.gif" style="" data-src="images/recommend2.jpg"
+                                    alt="loading"></a></li>
+                        <li><a href="#"><img src="images/loading.gif" style="" data-src="images/recommend3.jpg"
+                                    alt="loading"></a></li>
+                    </ul>
+                </div>
+                <script src="js/miphone.js"></script>
+                <div class="phone-show">
+                    <ul style="cursor: pointer">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="slogen">
+                    <a href="">
+                        <img src="images/loading.gif" style="" data-src="images/slogen.jpg" alt="loading">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mi-category">
+            <div class="xxm">
+                <!-- 手机部分开始----------------------------------------------------------------------------------------------------------------------------->
+                <div class="mobile">
+                    <h2 class="clearfix"><span class="title">手机</span><a class="more">查看更多<i
+                                class="iconfont">&#xe733;</i></a></h2>
+                    <div class="mobile-detail clearfix">
+                        <div class="detail-left">
+                            <a href="#"><img src="images/loading.gif" style="" data-src="images/detail-left.jpg"
+                                    alt="loading"></a>
+                        </div>
+                        <div class="detail-right">
+                            <ul>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/detail-right1.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh">骁龙855，索尼4800万超广角微距三摄111111111111</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/detail-right2.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/detail-right3.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/detail-right4.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">减200元</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/detail-right5.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/detail-right6.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/detail-right7.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh"> 骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">减50元</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/detail-right8.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slogen">
+                    <a href="">
+                        <img src="images/loading.gif" style="" data-src="images/slogen2.jpg" alt="loading">
+                    </a>
+                </div>
+                <!-- 家电部分start------------------------------------------------------------------------------------------------------------------------ -->
+                <div class="houseUse" style="margin-top: 22px">
+                    <h2 class="clearfix"><span class="title">家电</span>
+                        <div class="house-cate">
+                            <ul class="clearfix" type="jd">
+                                <li class="on">热门</li>
+                                <li>电视影音</li>
+                                <li>电脑</li>
+                                <li>家居</li>
+                            </ul>
+                        </div>
+                    </h2>
+                    <div class="detail clearfix">
+                        <div class="detail-left">
+                            <a href="#"><img src="images/loading.gif" style="" data-src="images/house-left1.jpg"
+                                    alt="loading"></a>
+                            <a style="margin-top: 14px" href="#"><img src="images/loading.gif" style=""
+                                    data-src="images/house-left2.jpg" alt="loading"></a>
+                        </div>
+                        <div class="detail-right">
+                            <ul>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/house-right1.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/house-right2.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/detail-right3.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/house-right4.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">减200元</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/house-right5.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/house-right6.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/house-right7.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment"> 骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#">小米净水器</a></span>
+                                        <span style="color: #ff6700;">123元</span>
+                                    </div>
+                                    <a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/house-right8.jpg" alt="loading"></a>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#" style="font-size: 16px;color:#333">浏览更多</a></span>
+                                        <span style="color: #b0b0b0;font-size:12px;transform:scale(.9)">热门</span>
+                                    </div>
+                                    <a href="#"><i class="iconfont">&#xe79c;</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slogen">
+                    <a href="">
+                        <img src="images/loading.gif" style="" data-src="images/slogen3.jpg" alt="loading">
+                    </a>
+                </div>
+                <!-- 智能部分开始-------------------------------------------------------------------------------------------------------------- -->
+                <div class="Intelligence" style="margin-top: 22px">
+                    <h2 class="clearfix"><span class="title">智能</span>
+                        <div class="house-cate">
+                            <ul class="clearfix" type='zn'>
+                                <li class="on">热门</li>
+                                <li>出行</li>
+                                <li>健康</li>
+                                <li>酷玩</li>
+                                <li>路由器</li>
+                            </ul>
+                        </div>
+                    </h2>
+                    <div class="detail clearfix">
+                        <div class="detail-left">
+                            <a href="#"><img src="images/loading.gif" style="" data-src="images/zn-left1.jpg"
+                                    alt="loading"></a>
+                            <a style="margin-top: 14px" href="#"><img src="images/loading.gif" style=""
+                                    data-src="images/zn-left2.jpg" alt="loading"></a>
+                        </div>
+                        <div class="detail-right">
+                            <ul>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/zn-right1.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/zn-right2.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/zn-right3.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/zn-right4.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">减200元</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/zn-right5.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/zn-right6.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/zn-right7.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment"> 骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#">小米净水器</a></span>
+                                        <span style="color: #ff6700;">123元</span>
+                                    </div>
+                                    <a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/zn-right8.jpg"" alt=" loading"></a>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#" style="font-size: 16px;color:#333">浏览更多</a></span>
+                                        <span style="color: #b0b0b0;font-size:12px;transform:scale(.9)">热门</span>
+                                    </div>
+                                    <a href="#"><i class="iconfont">&#xe79c;</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slogen">
+                    <a href="">
+                        <img src="images/loading.gif" style="" data-src="images/slogen4.jpg" alt="loading">
+                    </a>
+                </div>
+                <!-- 搭配部分开始-------------------------------------------------------------------------------------------------------------- -->
+                <div class="collocation" style="margin-top: 22px">
+                    <h2 class="clearfix"><span class="title">搭配</span>
+                        <div class="house-cate">
+                            <ul class="clearfix" type='dp'>
+                                <li class="on">热门</li>
+                                <li>出行</li>
+                                <li>健康</li>
+                                <li>酷玩</li>
+                                <li>路由器</li>
+                            </ul>
+                        </div>
+                    </h2>
+                    <div class="detail clearfix">
+                        <div class="detail-left">
+                            <a href="#"><img src="images/loading.gif" style="" data-src="images/dp-left1.jpg"
+                                    alt="loading"></a>
+                            <a style="margin-top: 14px" href="#"><img src="images/loading.gif" style=""
+                                    data-src="images/dp-left2.jpg" alt="loading"></a>
+                        </div>
+                        <div class="detail-right">
+                            <ul>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/dp-right1.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/dp-right2.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/dp-right3.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            data-src="images/dp-right4.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">减200元</span><a href="#"><img src="images/loading.gif"
+                                            style="" data-src="images/dp-right5.jpg" alt="loading"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" alt="loading" data-src="images/dp-right6.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" alt="loading" data-src="images/dp-right7.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment"> 骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#">小米净水器</a></span>
+                                        <span style="color: #ff6700;">123元</span>
+                                    </div>
+                                    <a href="#"><img src="images/loading.gif" style="" data-src="images/dp-right8.jpg"
+                                            alt="loading"></a>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#" style="font-size: 16px;color:#333">浏览更多</a></span>
+                                        <span style="color: #b0b0b0;font-size:12px;transform:scale(.9)">热门</span>
+                                    </div>
+                                    <a href="#"><i class="iconfont">&#xe79c;</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slogen">
+                    <a href="">
+                        <img src="images/loading.gif" style="" data-src="images/slogen5.jpg" alt="loading">
+                    </a>
+                </div>
+                <!-- 配件部分开始-------------------------------------------------------------------------------------------------------------- -->
+                <div class="parts" style="margin-top: 22px">
+                    <h2 class="clearfix"><span class="title">配件</span>
+                        <div class="house-cate">
+                            <ul class="clearfix" type='pj'>
+                                <li class="on">热门</li>
+                                <li>出行</li>
+                                <li>健康</li>
+                                <li>酷玩</li>
+                                <li>路由器</li>
+                            </ul>
+                        </div>
+                    </h2>
+                    <div class="detail clearfix">
+                        <div class="detail-left">
+                            <a href="#"><img src="images/loading.gif" style="" data-src="images/pj-left1.jpg"
+                                    alt="loading"></a>
+                            <a style="margin-top: 14px" href="#"><img src="images/loading.gif" style=""
+                                    data-src="images/pj-left2.jpg" alt="loading"></a>
+                        </div>
+                        <div class="detail-right">
+                            <ul>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            alt="loading" data-src="images/pj-right1.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            alt="loading" data-src="images/pj-right2.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            alt="loading" data-src="images/pj-right3.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-new">新品</span><a href="#"><img src="images/loading.gif" style=""
+                                            alt="loading" data-src="images/pj-right4.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">减200元</span><a href="#"><img src="images/loading.gif"
+                                            style="" alt="loading" data-src="images/pj-right5.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" alt="loading" data-src="images/pj-right6.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment">骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li><span class="tag-discount">享8折</span><a href="#"><img src="images/loading.gif"
+                                            style="" alt="loading" data-src="images/pj-right7.jpg"></a>
+                                    <h3><a class="slh" href="#">小米9 6GB+128GB</a></h3>
+                                    <p class="slh comment"> 骁龙855，索尼4800万超广角微距三摄</p>
+                                    <p class="price">2999元</p>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#">小米净水器</a></span>
+                                        <span style="color: #ff6700;">123元</span>
+                                    </div>
+                                    <a href="#"><img src="images/loading.gif" style="" data-src="images/pj-right8.jpg"
+                                            alt="loading"></a>
+                                </li>
+                                <li class="end-item">
+                                    <div class="item-title">
+                                        <span><a href="#" style="font-size: 16px;color:#333">浏览更多</a></span>
+                                        <span style="color: #b0b0b0;font-size:12px;transform:scale(.9)">热门</span>
+                                    </div>
+                                    <a href="#"><i class="iconfont">&#xe79c;</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slogen">
+                    <a href="">
+                        <img src="images/loading.gif" style="" data-src="images/slogen6.jpg" alt="loading">
+                    </a>
+                </div>
+                <!-- 热销推荐开始-------------------------------------------------------------------------------------------------------------- -->
+                <div class="hot" style="margin-top: 22px">
+                    <h2 class="clearfix"><span class="title">热销推荐</span>
+
+                    </h2>
+                    <ul class="clearfix">
+                        <li style="margin-left: 0px">
+                            <a href="3"><img src="images/loading.gif" style="" data-src="images/hot1.jpg"
+                                    alt="loading"></a>
+                            <p class="desc">外形简洁大方，大爱小米！全家人都在用小米的产品，真心不错，最主要的是性价比高。附图，给客服妹子一个大...</p>
+                            <p class="author"> 来自于 酸小妞～！ 的评价 </p>
+                            <h3>米家车载空气净化器(USB)<span class="fg">|</span><span class="price">499元</span></h3>
+                        </li>
+                        <li>
+                            <a href="3"><img src="images/loading.gif" style="" data-src="images/hot2.jpg"
+                                    alt="loading"></a>
+                            <p class="desc">超级喜欢！小巧玲珑！音质完美！不知道为什么！只要是小米出的东西我都喜欢！那倒是因为那一句？？小米为发...</p>
+                            <p class="author"> 来自于 田密 的评价 </p>
+                            <h3>小米随身蓝牙音箱<span class="fg">|</span><span class="price">69元</span></h3>
+                        </li>
+                        <li>
+                            <a href="3"><img src="images/loading.gif" style="" data-src="images/hot3.jpg"
+                                    alt="loading"></a>
+                            <p class="desc">非常可爱，一拿到小宝宝还没享受，一帮大宝宝先high了一把，同事也想买，希望早点大卖</p>
+                            <p class="author"> 来自于 秘密 的评价 </p>
+                            <h3>米兔智能故事机<span class="fg">|</span><span class="price">199元</span></h3>
+                        </li>
+                        <li>
+                            <a href="3"><img src="images/loading.gif" style="" data-src="images/hot4.jpg"
+                                    alt="loading"></a>
+                            <p class="desc">东西真心不错，用过最好用的插线板，做工外观没得挑剔，3个USB接口很实用，充电快，建议不包邮的应该在...</p>
+                            <p class="author"> 来自于 yinyin19891117 的评价 </p>
+                            <h3>小米插线板<span class="fg">|</span><span class="price">49元</span></h3>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 内容开始-------------------------------------------------------------------------------------------------------------- -->
+                <div class="cn" style="margin-top: 22px">
+                    <h2 class="clearfix"><span class="title">内容</span>
+
+                    </h2>
+                    <ul class="clearfix">
+                        <li class="wra" style="margin-left: 0px;border-top: 1px solid #ffac13">
+                            <h3 style="color: #ffac13">图书</h3>
+                            <ul class="clearfix">
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn1.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子2</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn2.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子3</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn3.png"
+                                            alt="loading"></a>
+                                </li>
+                            </ul>
+                            <div class="left">
+                                <i class="iconfont">&#xe609;</i>
+                            </div>
+                            <div class="right">
+                                <i class="iconfont">&#xe733;</i>
+                            </div>
+                            <div class="item-num">
+                                <span class="on"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                        <li class="wra" style="border-top: 1px solid #83c44e">
+                            <h3 style="color: #83c44e">MIUI 主题</h3>
+                            <ul id='zz' class="clearfix">
+                                <li>
+                                    <h4>BROWN & FRIENDS定制主题</h4>
+                                    <p class="desc">
+                                        BROWN & FRIENDS 小米定制主题，是LINE FRIENDS在与小米公司品牌合作基础上，为小米米粉节特殊定制。
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn3.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子2</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn2.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子3</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn1.png"
+                                            alt="loading"></a>
+                                </li>
+                            </ul>
+                            <div class="left">
+                                <i class="iconfont">&#xe609;</i>
+                            </div>
+                            <div class="right">
+                                <i class="iconfont">&#xe733;</i>
+                            </div>
+                            <div class="item-num">
+                                <span class="on"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                        <li class="wra" style="border-top: 1px solid #e53935">
+                            <h3 style="color: #e53935">游戏</h3>
+                            <ul class="clearfix">
+                                <li>
+                                    <h4>非人学院</h4>
+                                    <p class="desc">
+                                        脑洞大开的二次元竞技手游
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn4.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子2</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn5.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子3</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn1.png"
+                                            alt="loading"></a>
+                                </li>
+                            </ul>
+                            <div class="left">
+                                <i class="iconfont">&#xe609;</i>
+                            </div>
+                            <div class="right">
+                                <i class="iconfont">&#xe733;</i>
+                            </div>
+                            <div class="item-num">
+                                <span class="on"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                        <li class="wra" style="border-top: 1px solid #2196f3">
+                            <h3 style="color: #2196f3">应用</h3>
+                            <ul class="clearfix">
+                                <li>
+                                    <h4>2018金米奖</h4>
+                                    <p class="desc">
+                                        最优秀的应用和游戏
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn6.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子2</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn7.png"
+                                            alt="loading"></a>
+                                </li>
+                                <li>
+                                    <h4>哈利·波特与被诅咒的孩子3</h4>
+                                    <p class="desc">
+                                        “哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！
+                                    </p>
+                                    <p class="price">17.88元</p>
+                                    <a><img src="images/loading.gif" style="" data-src="images/cn7.png"
+                                            alt="loading"></a>
+                                </li>
+                            </ul>
+                            <div class="left">
+                                <i class="iconfont">&#xe609;</i>
+                            </div>
+                            <div class="right">
+                                <i class="iconfont">&#xe733;</i>
+                            </div>
+                            <div class="item-num">
+                                <span class="on"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 视频开始-------------------------------------------------------------------------------------------------------------- -->
+                <div class="video" style="margin-top: 22px">
+                    <h2 class="clearfix"><span class="title">视频</span><a class="more">查看更多<i
+                                class="iconfont">&#xe733;</i></a></h2>
+                    <div class="detail clearfix">
+                        <ul>
+                            <li style="margin-left:0px;">
+                                <!-- <span class="tag-new">新品</span> -->
+                                <a href="#">
+                                    <img src="images/loading.gif" style="" data-src="images/video1.jpg" alt="loading">
+                                    <div class="cover-btn ">
+                                        <img src="images/loading.gif" style="" data-src="images/play.png" title="播放"
+                                            alt="loading">
+                                    </div>
+                                </a>
+                                <h3><a class="slh" href="#">王源 & 小米9 全新广告大片</a></h3>
+                                <p class="desc">好看又能打！我反正被帅到了，Will You？</p>
+                            </li>
+                            <li>
+
+                                <a href="#">
+                                    <img src="images/loading.gif" style="" data-src="images/video2.jpg" alt="loading">
+                                    <div class="cover-btn ">
+                                        <img src="images/loading.gif" style="" data-src="images/play.png" title="播放"
+                                            alt="loading">
+                                    </div>
+                                </a>
+                                <h3><a class="slh" href="#">雷军对话王源</a></h3>
+                                <p class="desc">聊了3小时，这9个秘密决定公开</p>
+                            </li>
+                            <li>
+                                <!-- <span class="tag-new">新品</span> -->
+                                <a href="#">
+                                    <img src="images/loading.gif" style="" data-src="images/video3.jpg" alt="loading">
+                                    <div class="cover-btn ">
+                                        <img src="images/loading.gif" style="" data-src="images/play.png" title="播放"
+                                            alt="loading">
+                                    </div>
+                                </a>
+                                <h3><a class="slh" href="#">小米MIX 3 磁动力滑盖全面屏</a></h3>
+                                <p class="desc">全新滑盖交互体验，不一样的新感觉</p>
+                            </li>
+                            <li>
+                                <!-- <span class="tag-new">新品</span> -->
+                                <a href="#">
+                                    <img src="images/loading.gif" style="" data-src="images/video4.jpg" alt="loading">
+                                    <div class="cover-btn ">
+                                        <img src="images/loading.gif" data-src="images/play.png" title="播放"
+                                            alt="loading">
+                                    </div>
+                                </a>
+                                <h3><a class="slh" href="#">小米MIX 3 故宫特别版</a></h3>
+                                <p class="desc">传承中华国宝艺术之美</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="xxm">
+            <div class="tool">
+                <ul>
+                    <li><i class="iconfont">&#xe659;</i>预约维修</li>
+                    <li><i class="iconfont">&#xe633;</i>7天无理由退货</li>
+                    <li><i class="iconfont">&#xe61e;</i>15天免费换货</li>
+                    <li><i class="iconfont">&#xe61c;</i>满150元包邮</li>
+                    <li style="border-right: 0"><i class="iconfont">&#xe617;</i>520余家售后网点</li>
+                </ul>
+            </div>
+            <div class="service">
+                <div class="left">
+                    <dl>
+                        <dt>帮助中心</dt>
+                        <dd>账户管理</dd>
+                        <dd>购物指南</dd>
+                        <dd>订单操作</dd>
+                    </dl>
+                    <dl>
+                        <dt>服务支持</dt>
+                        <dd>售后政策</dd>
+                        <dd>自助服务</dd>
+                        <dd>相关下载</dd>
+                    </dl>
+                    <dl>
+                        <dt>线下门店</dt>
+                        <dd>账户管理</dd>
+                        <dd>购物指南</dd>
+                        <dd>订单操作</dd>
+                    </dl>
+                    <dl>
+                        <dt>关于小米</dt>
+                        <dd>账户管理</dd>
+                        <dd>购物指南</dd>
+                        <dd>订单操作</dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd>账户管理</dd>
+                        <dd>购物指南</dd>
+                        <dd>订单操作</dd>
+                    </dl>
+                    <dl class="end">
+                        <dt>特色服务</dt>
+                        <dd>账户管理</dd>
+                        <dd>购物指南</dd>
+                        <dd>订单操作</dd>
+                    </dl>
+                </div>
+                <div class="right">
+                    <p class="tele">13228529562</p>
+                    <p class="desc">周一至周日 8:00-18:00
+                        <br>（仅收市话费）</p>
+                    <a><i class="iconfont">&#xe61f;</i>联系客服</a>
+                </div>
+            </div>
+            <h1 class="declaration">小小米、为信仰而生</h1>
+        </div>
+    </footer>
+    <!-- toast层 -->
+    <div class="toast">
+
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

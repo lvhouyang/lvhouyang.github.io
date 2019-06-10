@@ -53,18 +53,18 @@
             }
 
             .toMb,
-            .toPc {
+            .toPc, .toMi {
                 width: 5rem;
-                height: 2.5rem;
+                height: 1.5rem;
                 background-color: pink;
-                line-height: 2.5rem;
+                line-height: 1.5rem;
                 color: #fff;
-                border-radius: .5rem;
+                border-radius: .2rem;
                 margin: .3rem 0;
                 text-align: center;
                 font-weight: 600px;
                 font-size: .5rem;
-                transition: all 1s ease-in-out;
+                transition: transform 1s ease-in-out,top .3s;
                 cursor: pointer;
             }
 
@@ -81,18 +81,19 @@
             }
 
             .toMb,
-            .toPc {
+            .toPc,
+            .toMi {
                 width: 2.5rem;
-                height: 1.25rem;
+                height: 1rem;
                 background-color: pink;
-                line-height: 1.25rem;
+                line-height: 1rem;
                 color: #fff;
-                border-radius: .3rem;
+                border-radius: .2rem;
                 margin: .3rem 0;
                 text-align: center;
                 font-weight: 600px;
                 font-size: .3rem;
-                transition: all 1s ease-in-out;
+                transition: transform 1s ease-in-out,top .3s;
                 cursor: pointer;
             }
 
@@ -104,27 +105,39 @@
         .toMb {
             transform: translateX(-1000px);
             background-color: #00bcd4;
+            position: relative;
+            top: 0;
         }
 
-        .toPc {
+        .toPc,.toMi {
             transform: translateX(1000px);
             background-color: #9F79EE;
+            position: relative;
+            top: 0;
+        }
+        .toMi {
+            background-color: #FF6700;
         }
 
         .toMb:hover {
-            transform: rotate(180deg);
+            /* transform: rotate(180deg); */
+            top: -4px;
         }
 
         .toPc:hover {
-            transform: rotate(-180deg);
+            /* transform: rotate(-180deg); */
+            top: -4px;
         }
-
+        .toMi:hover {
+            top: -4px;
+        }
         .welcome {
             transform: translate(0);
         }
 
         .container {
-            bottom: .25rem;
+            /* bottom: .25rem; */
+            bottom: -.3rem;
             position: fixed;
             width: 6.3rem;
             overflow: hidden;
@@ -209,6 +222,7 @@
 <body>
     <div class="cover-all">
         <div class="toMb">移动端去哪儿</div>
+        <div class="toMi">仿小米主页</div>
         <div class="toPc">PC端觅寻网</div>
         <div class="tip" style="display: none"></div>
         <div class="container clearfix">
@@ -230,6 +244,9 @@
                 } else if (target.className.indexOf('toPc') > -1) {
                     txt = '即将跳转到PC端觅训网页面，建议使用PC端访问~';
                     url = 'mixun.html';
+                } else {
+                    txt = '即将跳转到PC端小小米页面，建议使用PC端访问~';
+                    url = 'mi.html';
                 }
                 if (!txt) {
                     return false;
