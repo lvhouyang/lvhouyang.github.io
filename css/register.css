@@ -131,15 +131,18 @@ s, i, em {
     height: 110px;
     background-color: #ffffff;
     border-bottom: 1px solid #f1f1f1;
+    display: flex;
 }
 .header-logo{
     line-height: 110px;
     float: left;
-    padding-left: 350px;
+    flex: 1;
+    text-align: center;
 }
 .header-desc {
     float: right;
-    padding-right: 350px;
+    flex: 1;
+    text-align: center;
 }
 .RegisterBody {
     border: 1px dashed #f1f1f1;

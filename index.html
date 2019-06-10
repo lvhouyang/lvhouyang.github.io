@@ -27,9 +27,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url(images/bgpic.jpg) no-repeat;
+            background: url(images/RegisterLogo.jpg);
             background-size: contain;
-            background-size: 100% 100%
+            /* background-size: 100% 100% */
         }
 
         .tip {
@@ -47,9 +47,9 @@
 
         @media screen and (min-width:600px) {
             .cover-all {
-                background: url(images/bgpic.jpg) repeat;
+                background: url(images/RegisterLogo.jpg) repeat-x;
                 background-size: contain;
-                background-size: 100% 100%;
+                /* background-size: 100% 100%; */
             }
 
             .toMb,
@@ -75,7 +75,7 @@
 
         @media screen and (max-width:599px) {
             .cover-all {
-                background: url(images/bgpic-s.png) repeat;
+                background: url(images/RegisterLogo.jpg) repeat;
                 background-size: contain;
                 background-size: 100% 100%;
             }
@@ -93,7 +93,7 @@
                 text-align: center;
                 font-weight: 600px;
                 font-size: .3rem;
-                transition: transform 1s ease-in-out,top .3s;
+                transition: transform 1s ease-in-out,top .3s,opacity .3s;
                 cursor: pointer;
             }
 
@@ -109,13 +109,14 @@
             top: 0;
         }
 
-        .toPc,.toMi {
+        .toPc {
             transform: translateX(1000px);
             background-color: #9F79EE;
             position: relative;
             top: 0;
         }
         .toMi {
+            opacity: 0;
             background-color: #FF6700;
         }
 
@@ -133,6 +134,7 @@
         }
         .welcome {
             transform: translate(0);
+            opacity: 1;
         }
 
         .container {
