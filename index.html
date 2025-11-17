@@ -1,271 +1,94 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Wake</title>
-    <script src="plugin/jquery-3.3.1.min.js"></script>
-    <script src="js/nav.js"></script>
-    <link rel="stylesheet icon" href="images/RegisterLogo.jpg">
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>test</title>
     <style>
-        html,
-        body {
-            font-size: 100px;
-        }
-
-        .cover-all {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-color: #fff;
-            opacity: 1;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: url(images/RegisterLogo.jpg);
-            background-size: contain;
-            /* background-size: 100% 100% */
-        }
-
-        .tip {
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            z-index: 99999;
-            transform: translate(-50%, -50%) !important;
-            font-size: .15rem;
-            background-color: rgba(0, 0, 0, .6);
-            color: #fff;
-            border-radius: 5px;
-            padding: .1rem .1rem
-        }
-
-        @media screen and (min-width:600px) {
-            .cover-all {
-                background: url(images/RegisterLogo.jpg) repeat-x;
-                background-size: contain;
-                /* background-size: 100% 100%; */
-            }
-
-            .toMb,
-            .toPc, .toMi {
-                width: 5rem;
-                height: 1.5rem;
-                background-color: pink;
-                line-height: 1.5rem;
-                color: #fff;
-                border-radius: .2rem;
-                margin: .3rem 0;
-                text-align: center;
-                font-weight: 600px;
-                font-size: .5rem;
-                transition: transform 1s ease-in-out,top .3s;
-                cursor: pointer;
-            }
-
-            .container {
-                bottom: 0 !important;
-            }
-        }
-
-        @media screen and (max-width:599px) {
-            .cover-all {
-                background: url(images/RegisterLogo.jpg) repeat;
-                background-size: contain;
-                background-size: 100% 100%;
-            }
-
-            .toMb,
-            .toPc,
-            .toMi {
-                width: 2.5rem;
-                height: 1rem;
-                background-color: pink;
-                line-height: 1rem;
-                color: #fff;
-                border-radius: .2rem;
-                margin: .3rem 0;
-                text-align: center;
-                font-weight: 600px;
-                font-size: .3rem;
-                transition: transform 1s ease-in-out,top .3s,opacity .3s;
-                cursor: pointer;
-            }
-
-            .container {
-                transform: scale(.7) !important;
-            }
-        }
-
-        .toMb {
-            transform: translateX(-1000px);
-            background-color: #00bcd4;
-            position: relative;
-            top: 0;
-        }
-
-        .toPc {
-            transform: translateX(1000px);
-            background-color: #9F79EE;
-            position: relative;
-            top: 0;
-        }
-        .toMi {
-            opacity: 0;
-            position: relative;
-            top: 0;
-            background-color: #FF6700;
-        }
-
-        .toMb:hover {
-            /* transform: rotate(180deg); */
-            top: -4px;
-        }
-
-        .toPc:hover {
-            /* transform: rotate(-180deg); */
-            top: -4px;
-        }
-        .toMi:hover {
-            top: -4px;
-        }
-        .welcome {
-            transform: translate(0);
-            opacity: 1;
-        }
-
-        .container {
-            /* bottom: .25rem; */
-            bottom: -.3rem;
-            position: fixed;
-            width: 6.3rem;
-            overflow: hidden;
-            height: 2rem;
-        }
-
-        .container div {
-            position: absolute;
-            width: 2rem;
-            height: 1.8rem;
-        }
-
-        .wk {
-            background: url(images/wk.png) 0 0 no-repeat;
-            animation: wkz 1s steps(8) infinite;
-            left: 0;
-        }
-
-        .bj {
-            left: 1.5rem;
-            background: url(images/bj.png) 0 0 no-repeat;
-            animation: bjz 1s steps(8) infinite;
-        }
-
-        .ts {
-            width: 1.7rem !important;
-            left: 2.62rem;
-            top: -0.21rem;
-            transform: scale(.8);
-            background: url(images/ts.png) 0 0 no-repeat;
-            animation: tsz 1s steps(8) infinite;
-        }
-
-        .ss {
-            left: 3.93rem;
-            background: url(images/ss.png) 0 0 no-repeat;
-            animation: ssz 1s steps(8) infinite;
-        }
-
-        @keyframes wkz {
-            0% {
-                background-position: 0 0
-            }
-
-            100% {
-                background-position: -1600px 0
-            }
-        }
-
-        @keyframes bjz {
-            0% {
-                background-position: 0 0
-            }
-
-            100% {
-                background-position: -1600px 0
-            }
-        }
-
-        @keyframes tsz {
-            0% {
-                background-position: 0 0
-            }
-
-            100% {
-                background-position: -1360px 0
-            }
-        }
-
-        @keyframes ssz {
-            0% {
-                background-position: 0 0
-            }
-
-            100% {
-                background-position: -1680px 0
-            }
-        }
+      :root {
+        --bg: #f7f8fa;
+        --card-bg: #ffffff;
+        --text: #222;
+        --muted: #6b7280;
+        --primary: #64B5F6; /* soft blue */
+        --accent: #FFB74D; /* warm apricot */
+        --radius: 14px;
+        --shadow: 0 6px 20px rgba(0,0,0,0.08);
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--text); font: 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+      .wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+      .card { width: 100%; max-width: 560px; background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; }
+      .title { font-size: 18px; font-weight: 600; }
+      .desc { margin-top: 6px; color: var(--muted); font-size: 14px; }
+      .actions { margin-top: 14px; display: flex; gap: 10px; }
+      .btn { flex: 1; padding: 12px 16px; border-radius: 12px; border: none; font-size: 16px; font-weight: 600; color: #fff; background: linear-gradient(135deg, var(--primary), #4FC3F7); box-shadow: 0 4px 12px rgba(100,181,246,0.35); }
+      .btn:active { transform: translateY(1px); opacity: 0.95; }
+      .result { margin-top: 14px; border-top: 1px solid #eee; padding-top: 12px; }
+      .row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+      .label { min-width: 48px; font-size: 14px; color: var(--muted); }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+      .chip { min-width: 40px; height: 40px; padding: 0 10px; border-radius: 20px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+      .chip.front { background: var(--primary); }
+      .chip.back { background: var(--accent); }
+      .tips { margin-top: 10px; font-size: 12px; color: var(--muted); }
     </style>
-</head>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="title">大乐透号码生成器</div>
+        <div class="desc">点击下方按钮，随机生成一注号码（前区 5 个：01-35；后区 2 个：01-12）。</div>
 
-<body>
-    <div class="cover-all">
-        <div class="toMb">移动端去哪儿</div>
-        <div class="toMi">仿小米主页</div>
-        <div class="toPc">PC端觅寻网</div>
-        <div class="tip" style="display: none"></div>
-        <div class="container clearfix">
-            <div class="wk"></div>
-            <div class="bj"></div>
-            <div class="ts"></div>
-            <div class="ss"></div>
+        <div class="actions">
+          <button id="generate" class="btn">生成一注</button>
         </div>
+
+        <div class="result" id="result" aria-live="polite">
+          <div class="row">
+            <div class="label">前区</div>
+            <div class="chips" id="front"></div>
+          </div>
+          <div class="row">
+            <div class="label">后区</div>
+            <div class="chips" id="back"></div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script>
-        $(function () {
-            $('.cover-all div').click(function (e) {
-                var txt = '';
-                var target = e.target || e.srcElement;
-                var url = '';
-                if (target.className.indexOf('toMb') > -1) {
-                    txt = '即将跳转到移动端去哪儿页面，PC端请进入手机模拟器运行~';
-                    url = 'qunar.html';
-                } else if (target.className.indexOf('toPc') > -1) {
-                    txt = '即将跳转到PC端觅训网页面，建议使用PC端访问~';
-                    url = 'mixun.html';
-                } else {
-                    txt = '即将跳转到PC端小小米页面，建议使用PC端访问~';
-                    url = 'mi.html';
-                }
-                if (!txt) {
-                    return false;
-                }
-                $('.tip').text(txt);
-                $('.tip').fadeIn('slow');
-                setTimeout(function () {
-                    $('.tip').fadeOut('slow');
-                    window.location.href = url;
-                }, 2000);
-            });
-        })
+      function pickUnique(max, count) {
+        const set = new Set();
+        while (set.size < count) {
+          set.add(Math.floor(Math.random() * max) + 1);
+        }
+        return Array.from(set).sort((a, b) => a - b);
+      }
 
+      function pad2(n) { return String(n).padStart(2, '0'); }
+
+      function renderChips(container, nums, cls) {
+        container.innerHTML = '';
+        nums.forEach(n => {
+          const chip = document.createElement('span');
+          chip.className = `chip ${cls}`;
+          chip.textContent = pad2(n);
+          container.appendChild(chip);
+        });
+      }
+
+      function generateOne() {
+        const front = pickUnique(35, 5);
+        const back = pickUnique(12, 2);
+        renderChips(document.getElementById('front'), front, 'front');
+        renderChips(document.getElementById('back'), back, 'back');
+      }
+
+      document.getElementById('generate').addEventListener('click', generateOne);
+
+      // 初次打开也生成一注
+      generateOne();
     </script>
-</body>
-
-</html>
+  </body>
+  </html>
