@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zh-CN">
   <head>
@@ -44,6 +45,12 @@
       .code-back { color: var(--accent); background: rgba(255, 183, 77, 0.12); }
       .btn-use { padding: 6px 10px; border-radius: 8px; border: none; font-size: 13px; font-weight: 600; color: #fff; background: linear-gradient(135deg, var(--primary), #4FC3F7); box-shadow: 0 2px 8px rgba(100,181,246,0.25); }
       .btn-use:active { transform: translateY(1px); opacity: 0.95; }
+      .history-actions { display: flex; gap: 6px; align-items: center; }
+      .btn-copy { padding: 6px 10px; border-radius: 8px; border: none; font-size: 13px; font-weight: 600; color: #fff; background: linear-gradient(135deg, var(--accent), #FFD54F); box-shadow: 0 2px 8px rgba(255,183,77,0.25); }
+      .btn-copy:active { transform: translateY(1px); opacity: 0.95; }
+      /* Toast 提示 */
+      .toast { position: fixed; left: 50%; top: 20px; transform: translateX(-50%) translateY(-8px); background: linear-gradient(135deg, var(--primary), #4FC3F7); color: #fff; padding: 8px 12px; border-radius: 10px; box-shadow: 0 6px 20px rgba(100,181,246,0.28); font-size: 14px; font-weight: 600; opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; z-index: 9999; }
+      .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     </style>
   </head>
   <body>
@@ -71,12 +78,14 @@
       <!-- History box -->
       <div class="card" aria-label="最近生成记录">
         <div class="title">最近生成（最多 50 注）</div>
-        <div class="desc">点击右侧【使用】可回写到上方卡片</div>
-        <div class="history-list" id="history-list"></div>
+      <div class="desc">点击右侧【使用】可回写到上方卡片</div>
+      <div class="history-list" id="history-list"></div>
       </div>
     </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
     <script>
+      const HISTORY_KEY = 'dl_history_v1';
       const history = [];
       const HISTORY_MAX = 50;
 
@@ -89,6 +98,27 @@
       }
 
       function pad2(n) { return String(n).padStart(2, '0'); }
+
+      function saveHistoryToLocalStorage() {
+        try {
+          localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+        } catch (e) { /* 忽略存储错误 */ }
+      }
+
+      function loadHistoryFromLocalStorage() {
+        try {
+          const raw = localStorage.getItem(HISTORY_KEY);
+          if (!raw) return;
+          const arr = JSON.parse(raw);
+          if (Array.isArray(arr)) {
+            history.length = 0;
+            arr
+              .filter(x => typeof x === 'string' && x.includes('+'))
+              .slice(0, HISTORY_MAX)
+              .forEach(x => history.push(x));
+          }
+        } catch (e) { /* 忽略解析错误 */ }
+      }
 
       function codeString(front, back) {
         return `${front.map(pad2).join(',')}+${back.map(pad2).join(',')}`;
@@ -126,12 +156,20 @@
           codeEl.appendChild(frontSpan);
           codeEl.appendChild(plusSpan);
           codeEl.appendChild(backSpan);
-          const btn = document.createElement('button');
-          btn.className = 'btn-use';
-          btn.textContent = '使用';
-          btn.addEventListener('click', () => applyCode(code));
+          const actions = document.createElement('div');
+          actions.className = 'history-actions';
+          const btnCopy = document.createElement('button');
+          btnCopy.className = 'btn-copy';
+          btnCopy.textContent = '复制';
+          btnCopy.addEventListener('click', () => copyToClipboard(code));
+          const btnUse = document.createElement('button');
+          btnUse.className = 'btn-use';
+          btnUse.textContent = '使用';
+          btnUse.addEventListener('click', () => applyCode(code));
+          actions.appendChild(btnCopy);
+          actions.appendChild(btnUse);
           item.appendChild(codeEl);
-          item.appendChild(btn);
+          item.appendChild(actions);
           list.appendChild(item);
         });
       }
@@ -142,6 +180,38 @@
         history.unshift(code);
         while (history.length > HISTORY_MAX) history.pop();
         renderHistory();
+        saveHistoryToLocalStorage();
+      }
+
+      function showToast(message, duration = 1500) {
+        const el = document.getElementById('toast');
+        if (!el) return;
+        el.textContent = message;
+        el.classList.add('show');
+        clearTimeout(el._timer);
+        el._timer = setTimeout(() => {
+          el.classList.remove('show');
+        }, duration);
+      }
+
+      async function copyToClipboard(text) {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+          }
+          showToast('复制成功');
+        } catch (e) {
+          showToast('复制失败');
+        }
       }
 
       function applyCode(code) {
@@ -162,10 +232,14 @@
       }
 
       document.getElementById('generate').addEventListener('click', generateOne);
-
-      // 初次打开也生成一注
-      generateOne();
+      // 页面初始化：从 localStorage 回显历史，若无则生成一注
+      loadHistoryFromLocalStorage();
+      renderHistory();
+      if (history.length > 0) {
+        applyCode(history[0]);
+      } else {
+        generateOne();
+      }
     </script>
   </body>
   </html>
-
